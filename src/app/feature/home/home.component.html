@@ -1,0 +1,41 @@
+<div>
+  <section class="category">
+    <h2>Thuốc kê đơn</h2>
+    <div class="flex-box">
+      <div *ngFor="let item1 of tkd" appFavorite [node]="item1">
+        <p>{{item1.name}}</p>
+        <img src={{item1.img}}>
+        <p>{{item1.price}}$</p>
+        <div class="favorite">
+          <i class="far fa-heart like"></i>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="category">
+    <h2>Thuốc không kê đơn</h2>
+    <div class="flex-box">
+      <div *ngFor="let item2 of tkkd"  appFavorite [node]="item2">
+        <p>{{item2.name}}</p>
+        <img src={{item2.img}}>
+        <p>{{item2.price}}$</p>
+        <div class="favorite">
+          <i class="far fa-heart like"></i>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="category">
+    <h2>Thực phẩm chức năng</h2>
+    <div class="flex-box">
+      <div *ngFor="let item3 of tpcn"  appFavorite [node]="item3">
+        <p>{{item3.name}}</p>
+        <img src={{item3.img}}>
+        <p>{{item3.price}}$</p>
+        <div class="favorite">
+          <i class="far fa-heart like"></i>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
