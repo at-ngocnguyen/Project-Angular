@@ -15,7 +15,28 @@
       "email": "nguyenthusongngoc@gmail.com",
       "phone": "123",
       "address": "24",
-      "favorite": []
+      "favorite": [
+        {
+          "id": 11,
+          "name": "ENAT 400 ",
+          "img": "../../../assets/img/tkkd/1.jpg",
+          "price": 300,
+          "inventory": 10,
+          "description": "",
+          "category": 2,
+          "state": true
+        },
+        {
+          "id": 12,
+          "name": "DẦU GIÓ TRƯỜNG SƠN",
+          "img": "../../../assets/img/tkkd/2.jpg",
+          "price": 500,
+          "inventory": 10,
+          "description": "",
+          "category": 2,
+          "state": true
+        }
+      ]
     },
     {
       "id": 2,

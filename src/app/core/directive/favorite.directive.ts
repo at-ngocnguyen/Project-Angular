@@ -8,7 +8,7 @@ import { ApiService, ENDPOINT } from '../service/api/api.service';
 })
 export class FavoriteDirective {
   @Input() node: any;//get value of data object when click 
-  email = this.localer.getLocalStorage('TOKEN').email
+  email = this.localer.getLocalStorage('TOKEN') ? this.localer.getLocalStorage('TOKEN').email : false
   dataUser: any;
   constructor(
     private localer: LocalerService,
@@ -32,8 +32,6 @@ export class FavoriteDirective {
 
         if (this.node.state === true) {
           //style color when click
-          element.style.color = "red";
-
           if (index == -1) {
             this.dataUser[0].favorite.push(this.node)
             this.api.put(ENDPOINT.users + '/' + this.dataUser[0].id, this.dataUser[0])
@@ -43,7 +41,7 @@ export class FavoriteDirective {
         else {
           this.dataUser[0].favorite.splice(index, 1)
           this.api.put(ENDPOINT.users + '/' + this.dataUser[0].id, this.dataUser[0])
-          element.style.color = "grey";
+
         }
       });
     }

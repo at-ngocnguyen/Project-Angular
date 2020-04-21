@@ -16,9 +16,10 @@ export class HomeComponent implements OnInit {
 	constructor(
 		private apiService: ApiService,
 		private localer: LocalerService,
-		private userService: UserService
 	) { }
-	email = this.localer.getLocalStorage('TOKEN').email
+
+	email = this.localer.getLocalStorage('TOKEN') ? this.localer.getLocalStorage('TOKEN').email : ''
+
 	curentFa: any
 
 	checkFa(array, category) {
@@ -30,8 +31,7 @@ export class HomeComponent implements OnInit {
 
 				for (let j = 0; j < this.curentFa.length; j++) {
 					if (array[i].id === this.curentFa[j].id) {
-						let justFa = { state: true }
-						array[i] = Object.assign({}, array[i], justFa)
+						array[i].state = true;
 						if (category = 1) {
 							this.tkd = array
 						} else if (category = 2) {
@@ -45,9 +45,6 @@ export class HomeComponent implements OnInit {
 		});
 	}
 
-
-
-
 	ngOnChanges() {
 
 	}
@@ -55,15 +52,21 @@ export class HomeComponent implements OnInit {
 
 		this.apiService.get(ENDPOINT.products, '/?category=1&_limit=4').subscribe(e => {
 			this.tkd = e;
-			this.checkFa(e, 1)
+			if (this.email) {
+				this.checkFa(e, 1)
+			}
 		});
 		this.apiService.get(ENDPOINT.products, '/?category=2&_limit=4').subscribe(e => {
 			this.tkkd = e
-			this.checkFa(e, 2)
+			if (this.email) {
+				this.checkFa(e, 2)
+			}
 		});
 		this.apiService.get(ENDPOINT.products, '/?category=3&_limit=4').subscribe(e => {
 			this.tpcn = e
-			this.checkFa(e, 3)
+			if (this.email) {
+				this.checkFa(e, 3)
+			}
 		});
 
 	}

@@ -6,7 +6,7 @@
         <p>{{item1.name}}</p>
         <img src={{item1.img}}>
         <p>{{item1.price}}$</p>
-        <div class="favorite">
+        <div class="favorite"  *ngIf="email">
           <i class="far fa-heart like" [style.color]="item1.state ? 'red' :'grey'"></i>
         </div>
         <p *ngIf="item1.favorite">ok</p>
@@ -20,10 +20,9 @@
         <p>{{item2.name}}</p>
         <img src={{item2.img}}>
         <p>{{item2.price}}$</p>
-        <div class="favorite">
+        <div class="favorite" *ngIf="email">
           <i class="far fa-heart like" [style.color]="item2.state ? 'red' :'grey'"></i>
         </div>
-        <p *ngIf="item2.favorite">ok</p>
       </div>
     </div>
   </section>
@@ -34,7 +33,7 @@
         <p>{{item3.name}}</p>
         <img src={{item3.img}}>
         <p>{{item3.price}}$</p>
-        <div class="favorite">
+        <div class="favorite"  *ngIf="email">
           <i class="far fa-heart like" [style.color]="item3.state ? 'red' :'grey'"></i>
         </div>
       </div>

@@ -28,7 +28,7 @@ export class UserGuard implements CanActivate, CanActivateChild {
 
   checkLogin() {
     if (this.localer.getLocalStorage('TOKEN')) {
-      this.router.navigateByUrl('login')
+      this.router.navigateByUrl('/user')
       this.isLogin = true
     }
     return this.isLogin
