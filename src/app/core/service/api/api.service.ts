@@ -70,12 +70,9 @@ export class ApiService {
   //   );
   // }
   //put json-server
-  put(url: string, params?: any) {
+  put(url: string, params: any) {
     const axios = require('axios');
-
-    axios.put(API_DOMAIN + url, params).then(resp => {
-      console.log(resp.data);
-    }).catch(error => {
+    axios.put(API_DOMAIN + url, params).catch(error => {
       console.log(error);
     });
   }
