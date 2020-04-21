@@ -6,7 +6,8 @@ import { Injectable } from '@angular/core';
 export class UserService {
 
   constructor() { }
-  findIndex = (array:any, obj:any) => {
+
+  findIndex = (array: any, obj: any) => {
     var index = -1;
     if (array.length > 0) {
       for (var i = 0; i < array.length; i++) {

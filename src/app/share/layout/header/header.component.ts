@@ -17,6 +17,7 @@ export class HeaderComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
+
     this.auth.currentStatus.subscribe(e => this.isLogged = e);
   }
 

@@ -13,8 +13,30 @@
       "password": "123123",
       "re_password": "123123",
       "email": "nguyenthusongngoc@gmail.com",
-      "phone": "0934910466",
-      "address": "24"
+      "phone": "123",
+      "address": "24",
+      "favorite": [
+        {
+          "id": 11,
+          "name": "ENAT 400 ",
+          "img": "../../../assets/img/tkkd/1.jpg",
+          "price": 300,
+          "inventory": 10,
+          "description": "",
+          "category": 2,
+          "state": true
+        },
+        {
+          "id": 12,
+          "name": "DẦU GIÓ TRƯỜNG SƠN",
+          "img": "../../../assets/img/tkkd/2.jpg",
+          "price": 500,
+          "inventory": 10,
+          "description": "",
+          "category": 2,
+          "state": true
+        }
+      ]
     },
     {
       "id": 2,
@@ -23,20 +45,8 @@
       "re_password": "123123",
       "email": "nguyennaodo@gmail.com",
       "phone": "0934910466",
-      "address": "24"
-    },
-    {
-      "id": 3
-    },
-    {
-      "id": 4
-    },
-    {
-      "id": 5,
-      "fullName": "123",
-      "mail": "123@gmail.com",
-      "pass": "123123",
-      "rePass": "123123"
+      "address": "24",
+      "favorite": []
     }
   ],
   "products": [
