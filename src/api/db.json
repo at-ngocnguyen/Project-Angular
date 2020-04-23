@@ -13,7 +13,38 @@
       "email": "nguyenthusongngoc@gmail.com",
       "pass": "123123",
       "rePass": "123123",
-      "favorite": []
+      "favorite": [
+        {
+          "id": 1,
+          "name": "BIOTIN 5mg",
+          "img": "../../../assets/img/tkd/1.jpg",
+          "price": 165,
+          "inventory": 69,
+          "description": "",
+          "category": 1,
+          "state": true
+        },
+        {
+          "id": 12,
+          "name": "DẦU GIÓ TRƯỜNG SƠN",
+          "img": "../../../assets/img/tkkd/2.jpg",
+          "price": 500,
+          "inventory": 10,
+          "description": "",
+          "category": 2,
+          "state": true
+        },
+        {
+          "id": 11,
+          "name": "ENAT 400 ",
+          "img": "../../../assets/img/tkkd/1.jpg",
+          "price": 300,
+          "inventory": 10,
+          "description": "",
+          "category": 2,
+          "state": true
+        }
+      ]
     },
     {
       "id": 2,
@@ -33,18 +64,6 @@
           "state": true
         }
       ]
-    },
-    {
-      "id": 3,
-      "email": "nguyenthusongngoc@gmail.com",
-      "pass": "123123",
-      "favorite": []
-    },
-    {
-      "id": 4,
-      "email": "nguyenthusongngoc@gmail.com",
-      "pass": "123123",
-      "favorite": []
     }
   ],
   "products": [

@@ -31,8 +31,8 @@ const routes: Routes = [
   {
     path: 'user',
     loadChildren: () => import('./feature/user/user.module').then(m => m.UserModule),
-    // canActivate: [UserGuard],
-    // canActivateChild: [UserGuard],
+    canActivate: [UserGuard],
+    canActivateChild: [UserGuard],
   }
 ];
 

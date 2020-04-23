@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { ApiService, ENDPOINT } from 'src/app/core/service/api/api.service';
 import { AuthService } from 'src/app/core/service/auth/auth.service';
 import { LocalerService } from 'src/app/core/service/localer/localer.service';
-import { UserService } from 'src/app/core/user/user.service';
 import { Router } from '@angular/router';
 
 @Component({
@@ -36,9 +35,9 @@ export class HomeComponent implements OnInit {
 				for (let j = 0; j < this.curentFa.length; j++) {
 					if (array[i].id === this.curentFa[j].id) {
 						array[i].state = true;
-						if (category = 1) {
+						if (category == 1) {
 							this.tkd = array
-						} else if (category = 2) {
+						} else if (category == 2) {
 							this.tkkd = array
 						} else {
 							this.tpcn = array

@@ -1,4 +1,4 @@
-import { Directive, Input, HostListener, ElementRef } from '@angular/core';
+import { Directive, Input, HostListener  } from '@angular/core';
 import { LocalerService } from '../service/localer/localer.service';
 import { UserService } from '../user/user.service';
 import { ApiService, ENDPOINT } from '../service/api/api.service';
@@ -24,7 +24,6 @@ export class FavoriteDirective {
       this.api.get(ENDPOINT.users, '?email=' + this.email).subscribe(e => {
 
         this.dataUser = e;
-        console.log(this.dataUser[0]);
 
         let index = this.user.findIndex(this.dataUser[0].favorite, this.node);
         // let index = this.dataUser[0].favorite.findIndex(element => element.id === this.node.id);

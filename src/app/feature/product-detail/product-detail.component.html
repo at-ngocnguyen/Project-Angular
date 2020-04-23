@@ -1,9 +1,13 @@
-<div appFavorite [node]="data">
-  <img src={{data.img}}>
-  <p>{{data.name}}</p>
-  <p>{{data.price}}</p>
-  <div class="favorite" *ngIf="isLogin">
-    <i class="far fa-heart like" [style.color]="data.state ? 'red' :'grey'"></i>
+<div appFavorite [node]="data" class="detail">
+  <div class="detail-item">
+
+    <img src={{data.img}}>
+    <p>{{data.name}}</p>
+    <p>{{data.price}}</p>
+    <div class="favorite" *ngIf="isLogin">
+      <i class="far fa-heart like" [style.color]="data.state ? 'red' :'grey'"></i>
+    </div>
+    <button class="btn btn-primary">Add to Favorite</button>
+
   </div>
-  <button class="btn btn-primary">Add to Cart</button>
 </div>

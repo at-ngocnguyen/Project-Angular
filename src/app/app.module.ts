@@ -23,6 +23,7 @@ import { TkkdComponent } from './feature/products/tkkd/tkkd.component';
 import { TpcnComponent } from './feature/products/tpcn/tpcn.component';
 import { FormsModule } from '@angular/forms';
 import { FavoriteDirective } from './core/directive/favorite.directive';
+import { ProfileCanDeactivate } from './feature/user/profile/profile.candeactive';
 @NgModule({
   declarations: [
     AppComponent,
@@ -51,7 +52,8 @@ import { FavoriteDirective } from './core/directive/favorite.directive';
   ],
   providers: [
     ApiService,
-    UserGuard
+    UserGuard,
+    ProfileCanDeactivate
   ],
   bootstrap: [AppComponent]
 })
