@@ -22,18 +22,11 @@ export class LoginComponent implements OnInit {
     private local: LocalerService
   ) { }
 
-  getUser() {
-    this.apiService.get(ENDPOINT.users, '').subscribe(e => {
-      this.userData = e
-    })
-  }
-
   doLogin(form) {
-    console.log("LoginComponent -> doLogin -> form", form)
-    let status = false;
+    
     for (let i = 0; i < this.userData.length; i++) {
       if (this.userData[i].email === form.value.mail || this.userData[i].password === form.value.pass) {
-        status = true
+        let status = true
         this.ath.changeSatusLogin(status);
         this.local.saveLocalStorage({ email: this.email }, 'TOKEN')
         this.router.navigateByUrl('/')
@@ -42,7 +35,9 @@ export class LoginComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.getUser()
+    this.apiService.get(ENDPOINT.users, '').subscribe(e => {
+      this.userData = e
+    })
   }
 
 }

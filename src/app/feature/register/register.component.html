@@ -7,7 +7,7 @@
         #resultName="ngModel" [(ngModel)]="fullName" required>
       <p *ngIf="resultName.invalid && (resultName.dirty || resultName.touched)">This field was inValid</p>
 
-      <input type="email" id="email" class="fadeIn second" name="mail" placeholder="Email" #resultMail="ngModel"
+      <input type="email" id="email" class="fadeIn second" name="email" placeholder="Email" #resultMail="ngModel"
         [(ngModel)]="email" required>
       <p *ngIf="resultMail.invalid && (resultMail.dirty || resultMail.touched)">This field was inValid</p>
 

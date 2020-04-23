@@ -3,6 +3,7 @@ import { ApiService, ENDPOINT } from 'src/app/core/service/api/api.service';
 import { AuthService } from 'src/app/core/service/auth/auth.service';
 import { LocalerService } from 'src/app/core/service/localer/localer.service';
 import { UserService } from 'src/app/core/user/user.service';
+import { Router } from '@angular/router';
 
 @Component({
 	selector: 'app-home',
@@ -13,9 +14,12 @@ export class HomeComponent implements OnInit {
 	tkd: any;
 	tkkd: any;
 	tpcn: any;
+	isLogin: boolean;
 	constructor(
 		private apiService: ApiService,
 		private localer: LocalerService,
+		private auth: AuthService,
+		private route: Router
 	) { }
 
 	email = this.localer.getLocalStorage('TOKEN') ? this.localer.getLocalStorage('TOKEN').email : ''
@@ -45,11 +49,15 @@ export class HomeComponent implements OnInit {
 		});
 	}
 
+	getDetail(product) {
+		this.localer.saveLocalStorage(product,'DETAIL')
+		this.route.navigateByUrl('/detail')
+	}
 	ngOnChanges() {
 
 	}
 	ngOnInit(): void {
-
+		this.auth.currentStatus.subscribe(e => this.isLogin = e);
 		this.apiService.get(ENDPOINT.products, '/?category=1&_limit=4').subscribe(e => {
 			this.tkd = e;
 			if (this.email) {

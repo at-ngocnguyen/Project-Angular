@@ -2,7 +2,6 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { UserGuard } from './core/service/auth/userguard.guard';
 
-
 const routes: Routes = [
   {
     path: '',
@@ -26,10 +25,14 @@ const routes: Routes = [
     loadChildren: () => import('./feature/register/register.module').then(m => m.RegisterModule)
   },
   {
+    path: 'detail',
+    loadChildren: () => import('./feature/product-detail/product-detail.module').then(m => m.ProductDetailModule)
+  },
+  {
     path: 'user',
     loadChildren: () => import('./feature/user/user.module').then(m => m.UserModule),
-    canActivate: [UserGuard],
-    canActivateChild: [UserGuard],
+    // canActivate: [UserGuard],
+    // canActivateChild: [UserGuard],
   }
 ];
 

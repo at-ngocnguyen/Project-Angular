@@ -24,7 +24,7 @@ export class FavoriteDirective {
       this.api.get(ENDPOINT.users, '?email=' + this.email).subscribe(e => {
 
         this.dataUser = e;
-        console.log(this.dataUser[0].favorite);
+        console.log(this.dataUser[0]);
 
         let index = this.user.findIndex(this.dataUser[0].favorite, this.node);
         // let index = this.dataUser[0].favorite.findIndex(element => element.id === this.node.id);

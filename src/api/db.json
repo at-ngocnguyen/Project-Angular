@@ -9,43 +9,41 @@
   "users": [
     {
       "id": 1,
-      "name": "Nguyễn Thự Song Ngọc",
-      "password": "123123",
-      "re_password": "123123",
+      "fullName": "Nguyễn Thự Song Ngọc",
       "email": "nguyenthusongngoc@gmail.com",
-      "phone": "123",
-      "address": "24",
+      "pass": "123123",
+      "rePass": "123123",
+      "favorite": []
+    },
+    {
+      "id": 2,
+      "fullName": "Nguyễn Nào Đó",
+      "email": "nguyennaodo@gmail.com",
+      "pass": "123123",
+      "rePass": "123123",
       "favorite": [
         {
-          "id": 11,
-          "name": "ENAT 400 ",
-          "img": "../../../assets/img/tkkd/1.jpg",
-          "price": 300,
-          "inventory": 10,
+          "id": 1,
+          "name": "BIOTIN 5mg",
+          "img": "../../../assets/img/tkd/1.jpg",
+          "price": 165,
+          "inventory": 69,
           "description": "",
-          "category": 2,
-          "state": true
-        },
-        {
-          "id": 12,
-          "name": "DẦU GIÓ TRƯỜNG SƠN",
-          "img": "../../../assets/img/tkkd/2.jpg",
-          "price": 500,
-          "inventory": 10,
-          "description": "",
-          "category": 2,
+          "category": 1,
           "state": true
         }
       ]
     },
     {
-      "id": 2,
-      "name": "Nguyễn Nào Đó",
-      "password": "123123",
-      "re_password": "123123",
-      "email": "nguyennaodo@gmail.com",
-      "phone": "0934910466",
-      "address": "24",
+      "id": 3,
+      "email": "nguyenthusongngoc@gmail.com",
+      "pass": "123123",
+      "favorite": []
+    },
+    {
+      "id": 4,
+      "email": "nguyenthusongngoc@gmail.com",
+      "pass": "123123",
       "favorite": []
     }
   ],
