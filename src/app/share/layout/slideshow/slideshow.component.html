@@ -1,6 +1,11 @@
-<owl-carousel-o [options]="customOptions">
-  <ng-template carouselSlide *ngFor="let item of banner; let i = index">
- 
-    <img src={{item.img}} alt="">
-  </ng-template>
-</owl-carousel-o>
+<carousel [isAnimated]="true">
+  <slide>
+    <img src="../../../../assets/banner/banner1.jpg" alt="first slide" style="display: block; width: 100%;">
+  </slide>
+  <slide>
+    <img src="../../../../assets/banner/banner2.jpg" alt="second slide" style="display: block; width: 100%;">
+  </slide>
+  <slide>
+    <img src="../../../../assets/banner/banner3.jpg" alt="third slide" style="display: block; width: 100%;">
+  </slide>
+</carousel>

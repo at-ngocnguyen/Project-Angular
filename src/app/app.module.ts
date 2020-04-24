@@ -9,7 +9,6 @@ import { HomeComponent } from './feature/home/home.component';
 import { ApiService } from './core/service/api/api.service';
 import { HttpClientModule } from '@angular/common/http';
 import { SlideshowComponent } from './share/layout/slideshow/slideshow.component';
-import { CarouselModule } from 'ngx-owl-carousel-o';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { LoginComponent } from './feature/login/login.component';
 import { RegisterComponent } from './feature/register/register.component';
@@ -24,6 +23,7 @@ import { TpcnComponent } from './feature/products/tpcn/tpcn.component';
 import { FormsModule } from '@angular/forms';
 import { FavoriteDirective } from './core/directive/favorite.directive';
 import { ProfileCanDeactivate } from './feature/user/profile/profile.candeactive';
+import { CarouselModule } from 'ngx-bootstrap/carousel';
 @NgModule({
   declarations: [
     AppComponent,
@@ -48,7 +48,8 @@ import { ProfileCanDeactivate } from './feature/user/profile/profile.candeactive
     AppRoutingModule,
     HttpClientModule,
     CarouselModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    CarouselModule
   ],
   providers: [
     ApiService,
