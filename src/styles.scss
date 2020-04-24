@@ -93,26 +93,42 @@ ul li {
 }
 
 
-
-
-
-.login {
-  display: flex;
-  justify-content: center;
-  font-family: "Poppins", sans-serif;
-  height: 100vh;
-  background-color: #56baed;
+.showmore {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
 }
 
-.logo img {
-  margin: 40px 8px 10px 8px;
+.new-product {
+  h2 {
+    margin: 10px 0;
+  }
+
+  width: 60%;
+  margin: 50px auto;
+
+  img {
+    width: 100%;
+  }
+}
+
+.products {
+  h2 {
+    text-align: center;
+  }
+}
+
+.line-content {
+  display: block;
+  margin: 20px auto;
+  width: 70%;
+
 }
 
 h2 {
-  display: inline-block;
-  color: #cccccc;
   margin-bottom: 10px;
-  text-align: center;
   font-size: 16px;
   font-weight: 600;
   text-transform: uppercase;

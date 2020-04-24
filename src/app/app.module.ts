@@ -24,6 +24,8 @@ import { FormsModule } from '@angular/forms';
 import { FavoriteDirective } from './core/directive/favorite.directive';
 import { ProfileCanDeactivate } from './feature/user/profile/profile.candeactive';
 import { CarouselModule } from 'ngx-bootstrap/carousel';
+import { HomeModule } from './feature/home/home.module';
+import { LineComponent } from './share/line/line.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -41,15 +43,16 @@ import { CarouselModule } from 'ngx-bootstrap/carousel';
     TkkdComponent,
     TpcnComponent,
     FavoriteDirective,
+    LineComponent, 
   ],
   imports: [
     BrowserModule,
     FormsModule,
     AppRoutingModule,
     HttpClientModule,
-    CarouselModule,
     BrowserAnimationsModule,
-    CarouselModule
+    CarouselModule,
+    HomeModule,
   ],
   providers: [
     ApiService,

@@ -6,17 +6,18 @@
     tận
     tình từ các nhân viên, dược sĩ của chúng tôi.</p>
 </div>
-<div class="hot-product row">
-  <div class="col-sm-12">
+<div class="new-product row">
+  <div class="col-sm-12  text-center">
     <h2>Sản phẩm mới</h2>
   </div>
   <div class="col-sm-6">
-    <img src="../../../../assets/img/tkd/10.jpg">
+    <img src={{data.img}}>
   </div>
   <div class="col-sm-6">
-    <h2>KLENZIT</h2>
-    <p>100$</p>
+    <h2>{{data.name}}</h2>
     <h4>Giới thiệu</h4>
-  
+    <p [class.showmore]="unShow">{{data.description}}</p>
+    <button class="btn btn-link" (click)="showMore()" *ngIf="unShow">Xem thêm</button><br>
+    <button class="btn btn-primary" (click)="getDetail(data)">Chi tiết sản phẩm</button>
   </div>
 </div>
