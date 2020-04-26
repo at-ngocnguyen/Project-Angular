@@ -122,9 +122,11 @@ ul li {
     width: 100%;
   }
 }
-.news{
+
+.news {
   width: 90%;
 }
+
 .favorite {
   position: absolute;
   top: 0;
@@ -147,8 +149,8 @@ ul li {
 }
 
 h2 {
-  margin-bottom: 10px;
-  font-size: 16px;
+  text-align: center;
+  margin: 50px auto;
   font-weight: 600;
   text-transform: uppercase;
 }

@@ -1,4 +1,4 @@
-<div appFavorite [node]="data" class="detail" style="margin: 50px;">
+<section appFavorite [node]="data" class="detail" style="margin: 50px;">
 
   <div class=" row">
     <div class="col-sm-6" style="border:solid 1px #f2f2f2;border-radius: 5px;">
@@ -8,12 +8,33 @@
       <h4>{{data.name}}</h4>
       <img src="../../../../assets/anything/arrow.png" style="width: 70px;">
       <p style="font-size: 25px; color:#e6ae48;">{{data.price}} $</p>
-      <h2>Giới thiệu</h2>
+      <h4>Giới thiệu</h4>
       <p>{{data.description}}</p>
       <hr>
       <p>Danh mục: {{ctg}}</p>
       <hr>
-      <button>{{data.state?'abc':'123'}}</button>
+      <button class="btn btn-link">
+        <i style="width:100%">{{data.state? "Un Favorite": "Favorite"}}</i>
+      </button>
+      <i class="far fa-heart" [style.color]="data.state ? 'red' :'grey'"></i>
     </div>
   </div>
-</div>
+</section>
+<section class="category">
+  <h2>Thuốc cùng danh mục</h2>
+  <app-line></app-line>
+  <div class="flex-box ">
+    <div *ngFor="let item of category" appFavorite [node]="item">
+      <div class="products">
+        <div (click)="getDetail(item)">
+          <img src={{item.img}}>
+          <p>{{item.name}}</p>
+          <p>{{item.price}}$</p>
+        </div>
+        <div>
+          <i class="far fa-heart" [style.color]="item.state ? 'red' :'grey'"></i>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

@@ -21,7 +21,7 @@ export class HomeComponent implements OnInit {
 		private route: Router
 	) { }
 
-	email = this.localer.getLocalStorage('TOKEN') ? this.localer.getLocalStorage('TOKEN').email : ''
+	email = this.localer.getLocalStorage('TOKEN') ? this.localer.getLocalStorage('TOKEN').email : false
 
 	curentFa: any
 
@@ -49,7 +49,7 @@ export class HomeComponent implements OnInit {
 	}
 
 	getDetail(product) {
-		this.localer.saveLocalStorage(product,'DETAIL')
+		this.localer.saveLocalStorage(product, 'DETAIL')
 		this.route.navigateByUrl('/detail')
 	}
 	ngOnChanges() {

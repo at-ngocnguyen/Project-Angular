@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { LocalerService } from 'src/app/core/service/localer/localer.service';
 import { AuthService } from 'src/app/core/service/auth/auth.service';
 import { ApiService, ENDPOINT } from 'src/app/core/service/api/api.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-product-detail',
@@ -13,21 +14,49 @@ export class ProductDetailComponent implements OnInit {
   data: any;
   isLogin: boolean;
   ctg: string;
-  category: any
+  category: any;
+  email = this.localer.getLocalStorage('TOKEN') ? this.localer.getLocalStorage('TOKEN').email : false
+  curentFa: any
   constructor(
     private local: LocalerService,
     private auth: AuthService,
-    private apiService: ApiService
+    private apiService: ApiService,
+    private localer: LocalerService,
+    private route: Router
   ) { }
+  getDetail(product) {
+    this.localer.saveLocalStorage(product, 'DETAIL')
+    this.route.navigateByUrl('/detail')
+  }
+  checkFa() {
 
+    if (this.email) {
+      console.log('true');
+
+      this.apiService.get(ENDPOINT.users, '?email=' + this.email).subscribe(e => {
+        this.curentFa = e[0].favorite
+        console.log("ProductDetailComponent -> checkFa ->   this.curentFa", this.curentFa)
+        for (let j = 0; j < this.curentFa.length; j++) {
+          if (this.data.id === this.curentFa[j].id) {
+            this.curentFa[j].state = true;
+            this.data = this.curentFa[j]
+          }
+        }
+      });
+    }
+    else (console.log('false'))
+  }
   ngOnInit(): void {
+    this.data = this.local.getLocalStorage('DETAIL');
+    this.checkFa();
+    this.auth.currentStatus.subscribe(e => {
+      this.isLogin = e;
+    })
 
-    this.auth.currentStatus.subscribe(e => this.isLogin = e)
-    this.data = this.local.getLocalStorage('DETAIL')
     this.apiService.get(ENDPOINT.products, '/?category=' + this.data.category + '&_limit=4').subscribe(e => {
       this.category = e
     });
-    console.log(this.data);
+
     if (this.data.category == 1) {
       this.ctg = 'Thuốc kê đơn'
     } else if (this.data.category == 2) {
