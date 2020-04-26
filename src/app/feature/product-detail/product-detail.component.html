@@ -25,15 +25,10 @@
   <app-line></app-line>
   <div class="flex-box ">
     <div *ngFor="let item of category" appFavorite [node]="item">
-      <div class="products">
-        <div (click)="getDetail(item)">
-          <img src={{item.img}}>
-          <p>{{item.name}}</p>
-          <p>{{item.price}}$</p>
-        </div>
-        <div>
-          <i class="far fa-heart" [style.color]="item.state ? 'red' :'grey'"></i>
-        </div>
+      <div (click)="getDetail(item)">
+        <img src={{item.img}}>
+        <p>{{item.name}}</p>
+        <p>{{item.price}}$</p>
       </div>
     </div>
   </div>

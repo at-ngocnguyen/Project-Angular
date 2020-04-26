@@ -1,17 +1,19 @@
-<div class="wrapper">
-  <div id="formContent">
+<div class="page">
+  <div class="wrapper">
+    <div id="formContent">
+      <h2>Đăng nhập</h2>
+      <form #templateForm="ngForm" (ngSubmit)="doLogin(templateForm)">
+        <input type="text" id="email" class="fadeIn second" name="mail" placeholder="Email" #resultMail="ngModel"
+          [(ngModel)]="email" required>
+        <p *ngIf="resultMail.invalid && (resultMail.dirty || resultMail.touched)">This field was inValid</p>
 
-    <form #templateForm="ngForm" (ngSubmit)="doLogin(templateForm)">
-      <input type="text" id="email" class="fadeIn second" name="mail" placeholder="Email" #resultMail="ngModel"
-        [(ngModel)]="email" required>
-      <p *ngIf="resultMail.invalid && (resultMail.dirty || resultMail.touched)">This field was inValid</p>
+        <input type="password" id="password" name="pass" placeholder="Password" #resultPass="ngModel" [(ngModel)]="pass"
+          minlength="8" required>
+        <p *ngIf="resultPass.invalid && (resultPass.dirty || resultPass.touched)">This field was inValid</p>
 
-      <input type="password" id="password" name="pass" placeholder="Password" #resultPass="ngModel" [(ngModel)]="pass"
-        required>
-      <p *ngIf="resultPass.invalid && (resultPass.dirty || resultPass.touched)">This field was inValid</p>
+        <input type="submit" value="Log In">
+      </form>
 
-      <input type="submit" value="Log In">
-    </form>
-
+    </div>
   </div>
 </div>

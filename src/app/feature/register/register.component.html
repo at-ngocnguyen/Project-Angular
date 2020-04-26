@@ -1,27 +1,29 @@
-<div class="wrapper">
-  <div id="formContent">
+<div class="page">
+  <div class="wrapper">
+    <div id="formContent">
+      <h2>Đăng ký</h2>
+      <form #templateForm="ngForm" (ngSubmit)="doRegister(templateForm)">
 
-    <form #templateForm="ngForm" (ngSubmit)="doRegister(templateForm)">
+        <input type="text" id="fullName" class="fadeIn second" name="fullName" placeholder="Full name" minlength="8"
+          #resultName="ngModel" [(ngModel)]="fullName" required>
+        <p *ngIf="resultName.invalid && (resultName.dirty || resultName.touched)">Vui lòng kiểm tra lại trường</p>
 
-      <input type="text" id="fullName" class="fadeIn second" name="fullName" placeholder="Full name"
-        #resultName="ngModel" [(ngModel)]="fullName" required>
-      <p *ngIf="resultName.invalid && (resultName.dirty || resultName.touched)">This field was inValid</p>
+        <input type="email" id="email" class="fadeIn second" name="email" placeholder="Email" #resultMail="ngModel"
+          [(ngModel)]="email" required>
+        <p *ngIf="resultMail.invalid && (resultMail.dirty || resultMail.touched)">Vui lòng kiểm tra lại trường</p>
 
-      <input type="email" id="email" class="fadeIn second" name="email" placeholder="Email" #resultMail="ngModel"
-        [(ngModel)]="email" required>
-      <p *ngIf="resultMail.invalid && (resultMail.dirty || resultMail.touched)">This field was inValid</p>
+        <input type="password" id="password" name="pass" placeholder="Password" #resultPass="ngModel" [(ngModel)]="pass"
+          required>
+        <p *ngIf="resultPass.invalid && (resultPass.dirty || resultPass.touched)">Vui lòng kiểm tra lại trường</p>
 
-      <input type="password" id="password" name="pass" placeholder="Password" #resultPass="ngModel" [(ngModel)]="pass"
-        required>
-      <p *ngIf="resultPass.invalid && (resultPass.dirty || resultPass.touched)">This field was inValid</p>
+        <input type="password" id="password" name="rePass" placeholder="Comfirm Password" #resultRePass="ngModel"
+          [(ngModel)]="rePass" required>
+        <p *ngIf="resultRePass.invalid && (resultRePass.dirty || resultRePass.touched)">Vui lòng kiểm tra lại trường</p>
 
-      <input type="password" id="password" name="rePass" placeholder="Comfirm Password" #resultRePass="ngModel"
-        [(ngModel)]="rePass" required>
-      <p *ngIf="resultRePass.invalid && (resultRePass.dirty || resultRePass.touched)">This field was inValid</p>
+        <input type="submit" value="Sign In">
 
-      <input type="submit" value="Sign In">
+      </form>
 
-    </form>
-
+    </div>
   </div>
 </div>

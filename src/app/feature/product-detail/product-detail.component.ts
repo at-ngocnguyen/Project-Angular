@@ -25,17 +25,15 @@ export class ProductDetailComponent implements OnInit {
     private route: Router
   ) { }
   getDetail(product) {
+    console.log(product);
+
     this.localer.saveLocalStorage(product, 'DETAIL')
-    this.route.navigateByUrl('/detail')
+    this.route.navigateByUrl('detail')
   }
   checkFa() {
-
     if (this.email) {
-      console.log('true');
-
       this.apiService.get(ENDPOINT.users, '?email=' + this.email).subscribe(e => {
         this.curentFa = e[0].favorite
-        console.log("ProductDetailComponent -> checkFa ->   this.curentFa", this.curentFa)
         for (let j = 0; j < this.curentFa.length; j++) {
           if (this.data.id === this.curentFa[j].id) {
             this.curentFa[j].state = true;
@@ -44,7 +42,6 @@ export class ProductDetailComponent implements OnInit {
         }
       });
     }
-    else (console.log('false'))
   }
   ngOnInit(): void {
     this.data = this.local.getLocalStorage('DETAIL');

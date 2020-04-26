@@ -15,7 +15,7 @@
     <h4>{{data.name}}</h4>
     <img src="../../../../assets/anything/arrow.png" style="width: 70px;">
     <p style="font-size: 25px; color:#e6ae48;">{{data.price}} $</p>
-    <h2>Giới thiệu</h2>
+    <h4>Giới thiệu</h4>
     <p [class.showmore]="unShow">{{data.description}}</p>
     <button class="btn btn-link" (click)="showMore()" *ngIf="unShow">Xem thêm</button><br>
     <button class="btn btn-primary" (click)="getDetail(data)">Chi tiết sản phẩm</button>

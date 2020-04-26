@@ -11,8 +11,8 @@
       "id": 1,
       "fullName": "Nguyễn Thự Song Ngọc",
       "email": "nguyenthusongngoc@gmail.com",
-      "pass": "123123",
-      "rePass": "123123",
+      "pass": "123123123",
+      "rePass": "123123123",
       "favorite": [
         {
           "id": 3,
@@ -25,12 +25,31 @@
           "state": true
         },
         {
+          "id": 2,
+          "name": "IVERMECTIN MIC 6mg",
+          "img": "../../../assets/img/tkd/2.jpg",
+          "price": 165,
+          "inventory": "",
+          "category": 1,
+          "state": true
+        },
+        {
+          "id": 7,
+          "name": "BOCALEX",
+          "img": "../../../assets/img/tkd/7.jpg",
+          "price": 500,
+          "inventory": 23,
+          "description": "Với nghĩa vụ phục vụ cho sức khỏe của khách hàng, chúng tôi đem đến những sản phẩm tốt nhất và giá cả phải chăng nhất đến với khách hàng, đến với chúng tôi các bạn sẽ được nhận được sự phục vụ tận tình từ các nhân viên, dược sĩ của chúng tôi.",
+          "category": 1,
+          "state": true
+        },
+        {
           "id": 1,
           "name": "BIOTIN 5mg",
           "img": "../../../assets/img/tkd/1.jpg",
           "price": 165,
           "inventory": 69,
-          "description": "Viên uống Natrol Biotin 10.000 mcg bổ sung thành phần Biotin (còn gọi là vitamin H) - vốn được biết đến là là vitamin quan trọng cho tóc và móng. Natrol Biotin 10000 mcg không chứa phụ gia gây hại, không ảnh hưởng tới hệ tiêu hóa, thích hợp sử dụng cho cả nam và nữ.",
+          "description": "Với nghĩa vụ phục vụ cho sức khỏe của khách hàng, chúng tôi đem đến những sản phẩm tốt nhất và giá cả phải chăng nhất đến với khách hàng, đến với chúng tôi các bạn sẽ được nhận được sự phục vụ tận tình từ các nhân viên, dược sĩ của chúng tôi.",
           "category": 1,
           "state": true
         }
@@ -40,8 +59,27 @@
       "id": 2,
       "fullName": "Nguyễn Nào Đó",
       "email": "nguyennaodo@gmail.com",
-      "pass": "123123",
-      "rePass": "123123",
+      "pass": "123123123",
+      "rePass": "123123123",
+      "favorite": [
+        {
+          "id": 1,
+          "name": "BIOTIN 5mg",
+          "img": "../../../assets/img/tkd/1.jpg",
+          "price": 165,
+          "inventory": 69,
+          "description": "Với nghĩa vụ phục vụ cho sức khỏe của khách hàng, chúng tôi đem đến những sản phẩm tốt nhất và giá cả phải chăng nhất đến với khách hàng, đến với chúng tôi các bạn sẽ được nhận được sự phục vụ tận tình từ các nhân viên, dược sĩ của chúng tôi.",
+          "category": 1,
+          "state": true
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "fullName": "123123123",
+      "email": "121231@gmail.com",
+      "pass": "123123123",
+      "rePass": "123123123",
       "favorite": [
         {
           "id": 1,
