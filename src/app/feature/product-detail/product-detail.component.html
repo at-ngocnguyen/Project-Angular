@@ -1,13 +1,19 @@
-<div appFavorite [node]="data" class="detail">
-  <div class="detail-item">
+<div appFavorite [node]="data" class="detail" style="margin: 50px;">
 
-    <img src={{data.img}}>
-    <p>{{data.name}}</p>
-    <p>{{data.price}}</p>
-    <div class="favorite" *ngIf="isLogin">
-      <i class="far fa-heart like" [style.color]="data.state ? 'red' :'grey'"></i>
+  <div class=" row">
+    <div class="col-sm-6" style="border:solid 1px #f2f2f2;border-radius: 5px;">
+      <img src={{data.img}}>
     </div>
-    <button class="btn btn-primary">Add to Favorite</button>
-
+    <div class="col-sm-6">
+      <h4>{{data.name}}</h4>
+      <img src="../../../../assets/anything/arrow.png" style="width: 70px;">
+      <p style="font-size: 25px; color:#e6ae48;">{{data.price}} $</p>
+      <h2>Giới thiệu</h2>
+      <p>{{data.description}}</p>
+      <hr>
+      <p>Danh mục: {{ctg}}</p>
+      <hr>
+      <button>{{data.state?'abc':'123'}}</button>
+    </div>
   </div>
 </div>

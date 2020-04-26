@@ -9,6 +9,8 @@ import { Router } from '@angular/router';
 })
 export class IntroduceComponent implements OnInit {
   unShow = true;
+  link: any
+  ctg: string;
   data = {
     "id": 1,
     "name": "BIOTIN 5mg",
@@ -19,16 +21,22 @@ export class IntroduceComponent implements OnInit {
     "category": 1
   }
   constructor(
-    private localer :LocalerService,
-    private route:Router
+    private localer: LocalerService,
+    private route: Router
   ) { }
 
-	getDetail(product) {
-		this.localer.saveLocalStorage(product,'DETAIL')
-		this.route.navigateByUrl('/detail')
-	}
+  getDetail(product) {
+    this.localer.saveLocalStorage(product, 'DETAIL')
+    this.route.navigateByUrl('/detail')
+  }
   ngOnInit(): void {
-
+    if (this.data.category == 1) {
+      this.ctg = 'Thuốc kê đơn'
+    } else if (this.data.category == 2) {
+      this.ctg = 'Thuốc không kê đơn'
+    } else {
+      this.ctg = 'Thực phẩm chức năng'
+    }
   }
   showMore() {
     this.unShow = false

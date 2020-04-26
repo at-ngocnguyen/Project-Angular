@@ -20,18 +20,8 @@
           "img": "../../../assets/img/tkd/1.jpg",
           "price": 165,
           "inventory": 69,
-          "description": "",
+          "description": "Với nghĩa vụ phục vụ cho sức khỏe của khách hàng, chúng tôi đem đến những sản phẩm tốt nhất và giá cả phải chăng nhất đến với khách hàng, đến với chúng tôi các bạn sẽ được nhận được sự phục vụ tận tình từ các nhân viên, dược sĩ của chúng tôi.",
           "category": 1,
-          "state": true
-        },
-        {
-          "id": 12,
-          "name": "DẦU GIÓ TRƯỜNG SƠN",
-          "img": "../../../assets/img/tkkd/2.jpg",
-          "price": 500,
-          "inventory": 10,
-          "description": "",
-          "category": 2,
           "state": true
         },
         {
@@ -40,7 +30,7 @@
           "img": "../../../assets/img/tkkd/1.jpg",
           "price": 300,
           "inventory": 10,
-          "description": "",
+          "description": "Với nghĩa vụ phục vụ cho sức khỏe của khách hàng, chúng tôi đem đến những sản phẩm tốt nhất và giá cả phải chăng nhất đến với khách hàng, đến với chúng tôi các bạn sẽ được nhận được sự phục vụ tận tình từ các nhân viên, dược sĩ của chúng tôi.",
           "category": 2,
           "state": true
         }
@@ -59,7 +49,7 @@
           "img": "../../../assets/img/tkd/1.jpg",
           "price": 165,
           "inventory": 69,
-          "description": "",
+          "description": "Với nghĩa vụ phục vụ cho sức khỏe của khách hàng, chúng tôi đem đến những sản phẩm tốt nhất và giá cả phải chăng nhất đến với khách hàng, đến với chúng tôi các bạn sẽ được nhận được sự phục vụ tận tình từ các nhân viên, dược sĩ của chúng tôi.",
           "category": 1,
           "state": true
         }
@@ -73,7 +63,7 @@
       "img": "../../../assets/img/tkd/1.jpg",
       "price": 165,
       "inventory": 69,
-      "description": "",
+      "description": "Với nghĩa vụ phục vụ cho sức khỏe của khách hàng, chúng tôi đem đến những sản phẩm tốt nhất và giá cả phải chăng nhất đến với khách hàng, đến với chúng tôi các bạn sẽ được nhận được sự phục vụ tận tình từ các nhân viên, dược sĩ của chúng tôi.",
       "category": 1
     },
     {
@@ -90,7 +80,7 @@
       "img": "../../../assets/img/tkd/3.jpg",
       "price": 165,
       "inventory": 51,
-      "description": "",
+      "description": "Với nghĩa vụ phục vụ cho sức khỏe của khách hàng, chúng tôi đem đến những sản phẩm tốt nhất và giá cả phải chăng nhất đến với khách hàng, đến với chúng tôi các bạn sẽ được nhận được sự phục vụ tận tình từ các nhân viên, dược sĩ của chúng tôi.",
       "category": 1
     },
     {
@@ -99,7 +89,7 @@
       "img": "../../../assets/img/tkd/4.jpg",
       "price": 185,
       "inventory": "",
-      "description": "",
+      "description": "Với nghĩa vụ phục vụ cho sức khỏe của khách hàng, chúng tôi đem đến những sản phẩm tốt nhất và giá cả phải chăng nhất đến với khách hàng, đến với chúng tôi các bạn sẽ được nhận được sự phục vụ tận tình từ các nhân viên, dược sĩ của chúng tôi.",
       "category": 1
     },
     {
@@ -108,7 +98,7 @@
       "img": "../../../assets/img/tkd/5.jpg",
       "price": 300,
       "inventory": "",
-      "description": "",
+      "description": "Với nghĩa vụ phục vụ cho sức khỏe của khách hàng, chúng tôi đem đến những sản phẩm tốt nhất và giá cả phải chăng nhất đến với khách hàng, đến với chúng tôi các bạn sẽ được nhận được sự phục vụ tận tình từ các nhân viên, dược sĩ của chúng tôi.",
       "category": 1
     },
     {
@@ -117,7 +107,7 @@
       "img": "../../../assets/img/tkd/6.jpg",
       "price": 450,
       "inventory": 15,
-      "description": "",
+      "description": "Với nghĩa vụ phục vụ cho sức khỏe của khách hàng, chúng tôi đem đến những sản phẩm tốt nhất và giá cả phải chăng nhất đến với khách hàng, đến với chúng tôi các bạn sẽ được nhận được sự phục vụ tận tình từ các nhân viên, dược sĩ của chúng tôi.",
       "category": 1
     },
     {
@@ -126,7 +116,7 @@
       "img": "../../../assets/img/tkd/7.jpg",
       "price": 500,
       "inventory": 23,
-      "description": "",
+      "description": "Với nghĩa vụ phục vụ cho sức khỏe của khách hàng, chúng tôi đem đến những sản phẩm tốt nhất và giá cả phải chăng nhất đến với khách hàng, đến với chúng tôi các bạn sẽ được nhận được sự phục vụ tận tình từ các nhân viên, dược sĩ của chúng tôi.",
       "category": 1
     },
     {
@@ -135,7 +125,7 @@
       "img": "../../../assets/img/tkd/8.jpg",
       "price": 500,
       "inventory": 24,
-      "description": "",
+      "description": "Với nghĩa vụ phục vụ cho sức khỏe của khách hàng, chúng tôi đem đến những sản phẩm tốt nhất và giá cả phải chăng nhất đến với khách hàng, đến với chúng tôi các bạn sẽ được nhận được sự phục vụ tận tình từ các nhân viên, dược sĩ của chúng tôi.",
       "category": 1
     },
     {
@@ -144,7 +134,7 @@
       "img": "../../../assets/img/tkd/9.jpg",
       "price": 750,
       "inventory": 14,
-      "description": "",
+      "description": "Với nghĩa vụ phục vụ cho sức khỏe của khách hàng, chúng tôi đem đến những sản phẩm tốt nhất và giá cả phải chăng nhất đến với khách hàng, đến với chúng tôi các bạn sẽ được nhận được sự phục vụ tận tình từ các nhân viên, dược sĩ của chúng tôi.",
       "category": 1
     },
     {
@@ -153,7 +143,7 @@
       "img": "../../../assets/img/tkd/10.jpg",
       "price": 100,
       "inventory": 10,
-      "description": "",
+      "description": "Với nghĩa vụ phục vụ cho sức khỏe của khách hàng, chúng tôi đem đến những sản phẩm tốt nhất và giá cả phải chăng nhất đến với khách hàng, đến với chúng tôi các bạn sẽ được nhận được sự phục vụ tận tình từ các nhân viên, dược sĩ của chúng tôi.",
       "category": 1
     },
     {
@@ -162,7 +152,7 @@
       "img": "../../../assets/img/tkkd/1.jpg",
       "price": 300,
       "inventory": 10,
-      "description": "",
+      "description": "Với nghĩa vụ phục vụ cho sức khỏe của khách hàng, chúng tôi đem đến những sản phẩm tốt nhất và giá cả phải chăng nhất đến với khách hàng, đến với chúng tôi các bạn sẽ được nhận được sự phục vụ tận tình từ các nhân viên, dược sĩ của chúng tôi.",
       "category": 2
     },
     {
@@ -171,7 +161,7 @@
       "img": "../../../assets/img/tkkd/2.jpg",
       "price": 500,
       "inventory": 10,
-      "description": "",
+      "description": "Với nghĩa vụ phục vụ cho sức khỏe của khách hàng, chúng tôi đem đến những sản phẩm tốt nhất và giá cả phải chăng nhất đến với khách hàng, đến với chúng tôi các bạn sẽ được nhận được sự phục vụ tận tình từ các nhân viên, dược sĩ của chúng tôi.",
       "category": 2
     },
     {
@@ -180,7 +170,7 @@
       "img": "../../../assets/img/tkkd/3.jpg",
       "price": 550,
       "inventory": 10,
-      "description": "",
+      "description": "Với nghĩa vụ phục vụ cho sức khỏe của khách hàng, chúng tôi đem đến những sản phẩm tốt nhất và giá cả phải chăng nhất đến với khách hàng, đến với chúng tôi các bạn sẽ được nhận được sự phục vụ tận tình từ các nhân viên, dược sĩ của chúng tôi.",
       "category": 2
     },
     {
@@ -189,7 +179,7 @@
       "img": "../../../assets/img/tkkd/4.jpg",
       "price": 560,
       "inventory": 10,
-      "description": "",
+      "description": "Với nghĩa vụ phục vụ cho sức khỏe của khách hàng, chúng tôi đem đến những sản phẩm tốt nhất và giá cả phải chăng nhất đến với khách hàng, đến với chúng tôi các bạn sẽ được nhận được sự phục vụ tận tình từ các nhân viên, dược sĩ của chúng tôi.",
       "category": 2
     },
     {
@@ -198,7 +188,7 @@
       "img": "../../../assets/img/tkkd/5.jpg",
       "price": 600,
       "inventory": 10,
-      "description": "",
+      "description": "Với nghĩa vụ phục vụ cho sức khỏe của khách hàng, chúng tôi đem đến những sản phẩm tốt nhất và giá cả phải chăng nhất đến với khách hàng, đến với chúng tôi các bạn sẽ được nhận được sự phục vụ tận tình từ các nhân viên, dược sĩ của chúng tôi.",
       "category": 2
     },
     {
@@ -207,7 +197,7 @@
       "img": "../../../assets/img/tkkd/6.jpg",
       "price": 620,
       "inventory": 10,
-      "description": "",
+      "description": "Với nghĩa vụ phục vụ cho sức khỏe của khách hàng, chúng tôi đem đến những sản phẩm tốt nhất và giá cả phải chăng nhất đến với khách hàng, đến với chúng tôi các bạn sẽ được nhận được sự phục vụ tận tình từ các nhân viên, dược sĩ của chúng tôi.",
       "category": 2
     },
     {
@@ -216,7 +206,7 @@
       "img": "../../../assets/img/tkkd/7.jpg",
       "price": 700,
       "inventory": 10,
-      "description": "",
+      "description": "Với nghĩa vụ phục vụ cho sức khỏe của khách hàng, chúng tôi đem đến những sản phẩm tốt nhất và giá cả phải chăng nhất đến với khách hàng, đến với chúng tôi các bạn sẽ được nhận được sự phục vụ tận tình từ các nhân viên, dược sĩ của chúng tôi.",
       "category": 2
     },
     {
@@ -225,7 +215,7 @@
       "img": "../../../assets/img/tkkd/8.jpg",
       "price": 800,
       "inventory": 10,
-      "description": "",
+      "description": "Với nghĩa vụ phục vụ cho sức khỏe của khách hàng, chúng tôi đem đến những sản phẩm tốt nhất và giá cả phải chăng nhất đến với khách hàng, đến với chúng tôi các bạn sẽ được nhận được sự phục vụ tận tình từ các nhân viên, dược sĩ của chúng tôi.",
       "category": 2
     },
     {
@@ -234,7 +224,7 @@
       "img": "../../../assets/img/tkkd/9.jpg",
       "price": 920,
       "inventory": 10,
-      "description": "",
+      "description": "Với nghĩa vụ phục vụ cho sức khỏe của khách hàng, chúng tôi đem đến những sản phẩm tốt nhất và giá cả phải chăng nhất đến với khách hàng, đến với chúng tôi các bạn sẽ được nhận được sự phục vụ tận tình từ các nhân viên, dược sĩ của chúng tôi.",
       "category": 2
     },
     {
@@ -243,7 +233,7 @@
       "img": "../../../assets/img/tkkd/10.jpg",
       "price": 100,
       "inventory": 10,
-      "description": "",
+      "description": "Với nghĩa vụ phục vụ cho sức khỏe của khách hàng, chúng tôi đem đến những sản phẩm tốt nhất và giá cả phải chăng nhất đến với khách hàng, đến với chúng tôi các bạn sẽ được nhận được sự phục vụ tận tình từ các nhân viên, dược sĩ của chúng tôi.",
       "category": 2
     },
     {
@@ -252,7 +242,7 @@
       "img": "../../../assets/img/tpcn/1.jpg",
       "price": 200,
       "inventory": 10,
-      "description": "",
+      "description": "Với nghĩa vụ phục vụ cho sức khỏe của khách hàng, chúng tôi đem đến những sản phẩm tốt nhất và giá cả phải chăng nhất đến với khách hàng, đến với chúng tôi các bạn sẽ được nhận được sự phục vụ tận tình từ các nhân viên, dược sĩ của chúng tôi.",
       "category": 2
     },
     {
@@ -261,7 +251,7 @@
       "img": "../../../assets/img/tpcn/2.jpg",
       "price": 210,
       "inventory": 10,
-      "description": "",
+      "description": "Với nghĩa vụ phục vụ cho sức khỏe của khách hàng, chúng tôi đem đến những sản phẩm tốt nhất và giá cả phải chăng nhất đến với khách hàng, đến với chúng tôi các bạn sẽ được nhận được sự phục vụ tận tình từ các nhân viên, dược sĩ của chúng tôi.",
       "category": 3
     },
     {
@@ -270,7 +260,7 @@
       "img": "../../../assets/img/tpcn/3.jpg",
       "price": 250,
       "inventory": 10,
-      "description": "",
+      "description": "Với nghĩa vụ phục vụ cho sức khỏe của khách hàng, chúng tôi đem đến những sản phẩm tốt nhất và giá cả phải chăng nhất đến với khách hàng, đến với chúng tôi các bạn sẽ được nhận được sự phục vụ tận tình từ các nhân viên, dược sĩ của chúng tôi.",
       "category": 3
     },
     {
@@ -279,7 +269,7 @@
       "img": "../../../assets/img/tpcn/4.jpg",
       "price": 250,
       "inventory": 10,
-      "description": "",
+      "description": "Với nghĩa vụ phục vụ cho sức khỏe của khách hàng, chúng tôi đem đến những sản phẩm tốt nhất và giá cả phải chăng nhất đến với khách hàng, đến với chúng tôi các bạn sẽ được nhận được sự phục vụ tận tình từ các nhân viên, dược sĩ của chúng tôi.",
       "category": 3
     },
     {
@@ -288,7 +278,7 @@
       "img": "../../../assets/img/tpcn/5.jpg",
       "price": 500,
       "inventory": 10,
-      "description": "",
+      "description": "Với nghĩa vụ phục vụ cho sức khỏe của khách hàng, chúng tôi đem đến những sản phẩm tốt nhất và giá cả phải chăng nhất đến với khách hàng, đến với chúng tôi các bạn sẽ được nhận được sự phục vụ tận tình từ các nhân viên, dược sĩ của chúng tôi.",
       "category": 3
     },
     {
@@ -297,7 +287,7 @@
       "img": "../../../assets/img/tpcn/6.jpg",
       "price": 800,
       "inventory": 10,
-      "description": "",
+      "description": "Với nghĩa vụ phục vụ cho sức khỏe của khách hàng, chúng tôi đem đến những sản phẩm tốt nhất và giá cả phải chăng nhất đến với khách hàng, đến với chúng tôi các bạn sẽ được nhận được sự phục vụ tận tình từ các nhân viên, dược sĩ của chúng tôi.",
       "category": 3
     },
     {
@@ -306,7 +296,7 @@
       "img": "../../../assets/img/tpcn/7.jpg",
       "price": 800,
       "inventory": 10,
-      "description": "",
+      "description": "Với nghĩa vụ phục vụ cho sức khỏe của khách hàng, chúng tôi đem đến những sản phẩm tốt nhất và giá cả phải chăng nhất đến với khách hàng, đến với chúng tôi các bạn sẽ được nhận được sự phục vụ tận tình từ các nhân viên, dược sĩ của chúng tôi.",
       "category": 3
     },
     {
@@ -315,7 +305,7 @@
       "img": "../../../assets/img/tpcn/8.jpg",
       "price": 900,
       "inventory": 10,
-      "description": "",
+      "description": "Với nghĩa vụ phục vụ cho sức khỏe của khách hàng, chúng tôi đem đến những sản phẩm tốt nhất và giá cả phải chăng nhất đến với khách hàng, đến với chúng tôi các bạn sẽ được nhận được sự phục vụ tận tình từ các nhân viên, dược sĩ của chúng tôi.",
       "category": 3
     },
     {
@@ -324,7 +314,7 @@
       "img": "../../../assets/img/tpcn/9.jpg",
       "price": 100,
       "inventory": 10,
-      "description": "",
+      "description": "Với nghĩa vụ phục vụ cho sức khỏe của khách hàng, chúng tôi đem đến những sản phẩm tốt nhất và giá cả phải chăng nhất đến với khách hàng, đến với chúng tôi các bạn sẽ được nhận được sự phục vụ tận tình từ các nhân viên, dược sĩ của chúng tôi.",
       "category": 3
     },
     {
@@ -333,227 +323,25 @@
       "img": "../../../assets/img/tpcn/10.jpg",
       "price": 100,
       "inventory": 10,
-      "description": "",
+      "description": "Với nghĩa vụ phục vụ cho sức khỏe của khách hàng, chúng tôi đem đến những sản phẩm tốt nhất và giá cả phải chăng nhất đến với khách hàng, đến với chúng tôi các bạn sẽ được nhận được sự phục vụ tận tình từ các nhân viên, dược sĩ của chúng tôi.",
       "category": 3
     }
   ],
-  "loaisp": [
-    {
-      "id": 2,
-      "name": "wine white",
-      "status": true
-    },
-    {
-      "id": 3,
-      "name": "wine champagne",
-      "status": false
-    },
-    {
-      "id": 4,
-      "name": "wine champagne 12",
-      "status": true
-    },
-    {
-      "id": 5,
-      "name": "Vang Phap",
-      "status": false
-    },
-    {
-      "id": 6,
-      "name": "vang da lat thnag12",
-      "status": false
-    }
-  ],
-  "orders": [
-    {
-      "id": 2,
-      "information": {
-        "email": "123",
-        "name": "123",
-        "address": "123",
-        "phone": "123",
-        "ngaytao": "2019-12-21T08:10:13.732Z"
-      },
-      "total": 1420,
-      "tinhtrang": true
-    },
+  "category": [
     {
       "id": 1,
-      "information": {
-        "email": "123",
-        "name": "123789",
-        "address": "123",
-        "phone": "123",
-        "ngaytao": "2019-12-21T08:10:13.732Z"
-      },
-      "cartItems": [
-        {
-          "product": {
-            "id": 21,
-            "name": "RƯỢU CHAMPAGNE BRUNO PAOLLARD “PREMIERE CUVEE”",
-            "img": "../Product/product1.jpg",
-            "price": 200,
-            "inventory": 10,
-            "description": "",
-            "category": 3
-          },
-          "count": 5
-        },
-        {
-          "product": {
-            "id": 22,
-            "name": "RƯỢU CHAMPAGNE BRUNO PAOLLARD “RESERVE PRIVEE”",
-            "img": "../Product/product1.jpg",
-            "price": 210,
-            "inventory": 10,
-            "description": "",
-            "category": 3
-          },
-          "count": 2
-        }
-      ],
-      "total": 1420,
-      "tinhtrang": true
+      "name": "Thuốc kê đơn",
+      "status": true
+    },
+    {
+      "id": 2,
+      "name": "Thuốc không kê đơn",
+      "status": false
     },
     {
       "id": 3,
-      "information": {
-        "email": "1",
-        "name": "123456",
-        "address": "123",
-        "phone": "123",
-        "ngaytao": "2019-12-21T08:10:13.732Z"
-      },
-      "cart": [
-        {
-          "product": {
-            "id": 21,
-            "name": "RƯỢU CHAMPAGNE BRUNO PAOLLARD “PREMIERE CUVEE”",
-            "img": "../Product/product1.jpg",
-            "price": 200,
-            "inventory": 10,
-            "description": "",
-            "category": 3
-          },
-          "count": 5
-        },
-        {
-          "product": {
-            "id": 22,
-            "name": "RƯỢU CHAMPAGNE BRUNO PAOLLARD “RESERVE PRIVEE”",
-            "img": "../Product/product1.jpg",
-            "price": 210,
-            "inventory": 10,
-            "description": "",
-            "category": 3
-          },
-          "count": 2
-        }
-      ],
-      "total": 1420,
-      "tinhtrang": false
-    },
-    {
-      "id": 4,
-      "information": {
-        "email": "nguyenthusongngoc@gmail.com",
-        "name": "",
-        "address": "",
-        "phone": "",
-        "ngaytao": "2020-01-04T05:11:51.986Z"
-      },
-      "cart": [
-        {
-          "product": {
-            "id": 4,
-            "name": "RƯỢU VANG ANIMA DI NEGROAMARO",
-            "img": "",
-            "price": 185,
-            "inventory": 50,
-            "description": "",
-            "category": 1
-          },
-          "count": 1
-        },
-        {
-          "product": {
-            "id": 5,
-            "name": "RƯỢU VANG F LIMITED",
-            "img": "",
-            "price": 300,
-            "inventory": 45,
-            "description": "",
-            "category": 1
-          },
-          "count": 1
-        }
-      ],
-      "total": 460.75,
-      "tinhtrang": true
-    },
-    {
-      "id": 5,
-      "information": {
-        "email": "nguyenthusongngoc@gmail.com",
-        "name": "Nguyễn Thự Song Ngọc",
-        "address": "01 Lê Cảnh Tuân, Sơn Trà, Đà Nẵng",
-        "phone": "0779592626",
-        "ngaytao": "2020-01-04T05:40:07.716Z"
-      },
-      "cart": [
-        {
-          "product": {
-            "id": 3,
-            "name": "RƯỢU VANG 62 ANNIVERSARIO",
-            "img": "",
-            "price": 165,
-            "inventory": 51,
-            "description": "",
-            "category": 1
-          },
-          "count": 1
-        }
-      ],
-      "total": 156.75,
-      "tinhtrang": ""
-    },
-    {
-      "id": 6,
-      "information": {
-        "email": "nguyenthusongngoc@gmail.com",
-        "name": "Nguyễn Thự Song Ngọc",
-        "address": "01 Lê Cảnh Tuân, Sơn Trà, Đà Nẵng",
-        "phone": "0779592626",
-        "ngaytao": "2020-01-04T07:13:31.138Z"
-      },
-      "cart": [
-        {
-          "product": {
-            "id": 3,
-            "name": "RƯỢU VANG 62 ANNIVERSARIO",
-            "img": "",
-            "price": 165,
-            "inventory": 51,
-            "description": "",
-            "category": 1
-          },
-          "count": 2
-        },
-        {
-          "product": {
-            "id": 5,
-            "name": "RƯỢU VANG F LIMITED",
-            "img": "",
-            "price": 300,
-            "inventory": 45,
-            "description": "",
-            "category": 1
-          },
-          "count": 2
-        }
-      ],
-      "total": 883.5,
-      "tinhtrang": ""
+      "name": "Thực phẩm chức năng",
+      "status": true
     }
   ]
 }
