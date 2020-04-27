@@ -1,0 +1,11 @@
+<div class="form-group">
+  <label for="usename">Username</label>
+  <input type="text" name="usename" class="form-control" id="usename" (input)="checkType()">
+  <label for="usename">Password</label>
+
+  <input type={{statePass}} name="password" class="form-control relative" id="password" (input)="checkType()">
+  <i class="absolute" [class]="show?'fas fa-eye-slash':'fas fa-eye'" (click)="showPass()"></i>
+
+
+
+</div>
