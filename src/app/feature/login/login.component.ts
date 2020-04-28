@@ -26,37 +26,36 @@ export class LoginComponent implements OnInit {
   ) { }
 
   doLogin(form) {
-    let isValid = false;
-    if (form.touched && form.dirty) {
-      for (let i = 0; i < this.userData.length; i++) {
-        if (this.userService.validateEmail(form.value.email) && this.userData[i].email === form.value.email && form.status == 'VALID') {
-          isValid = true;
-          this.classMail = 'form-control is-valid'
-          if (this.userData[i].pass === form.value.pass) {
-            isValid = true;
-            this.classPass = 'form-control is-valid'
-          } else {
-            isValid = false;
-            this.classPass = 'form-control is-invalid'
-          }
-          break;
-        } else {
-          isValid = false;
-          this.classPass = 'form-control is-invalid'
-          this.classMail = 'form-control is-invalid'
-        }
 
+    let isSubmit = false;
+    let currentUser: any;
+    for (let i = 0; i < this.userData.length; i++) {
+
+      if (form.value.email === this.userData[i].email && form.value.pass === this.userData[i].pass) {
+        isSubmit = true;
+        this.classMail = 'form-control is-valid'
+        this.classPass = 'form-control is-valid'
+        currentUser = this.userData[i]
+        break;
+      } else {
+        this.classMail = 'form-control is-invalid';
+        this.classPass = 'form-control is-invalid';
+        isSubmit = false;
       }
     }
-    if (isValid) {
-      this.ath.changeSatusLogin(isValid);
-      this.local.saveLocalStorage({ email: this.email }, 'TOKEN')
-      this.router.navigateByUrl('/')
-    }
+    if (isSubmit) {
+      this.ath.changeSatusLogin(isSubmit);
+      this.ath.changeUser(currentUser)
 
+      this.local.saveLocalStorage({ currentUser: currentUser }, 'TOKEN')
+      this.router.navigateByUrl('/')
+
+    }
   }
 
+
   ngOnInit(): void {
+
     this.apiService.get(ENDPOINT.users, '').subscribe(e => {
       this.userData = e
     })

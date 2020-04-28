@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ApiService, ENDPOINT } from 'src/app/core/service/api/api.service';
 import { Router } from '@angular/router';
-import { AuthService } from 'src/app/core/service/auth/auth.service';
 import { UserService } from 'src/app/core/user/user.service';
 
 
@@ -31,53 +30,45 @@ export class RegisterComponent implements OnInit {
     })
   }
 
-  checkEmail(mail) {
-    let isValid = true;
-    console.log(this.userService.validateEmail(mail));
 
-    if (!this.userService.validateEmail(mail)) {
-      isValid = false
-      console.log(isValid);
-
-    } else {
-      for (let i = 0; i < this.dataUser.length; i++) {
-        if (this.dataUser[i].email === mail) {
-          isValid = true;
-          break;
-        }
-      }
-    }
-    if (isValid) {
-      this.classMail = 'form-control is-valid'
-    } else {
-      this.classMail = 'form-control is-invalid'
-    }
-
-    return isValid
-  }
-
-  checkForm(pass, rePass) {
-
-    let isValid = true;
-    
-    if (!pass) {
-      isValid = false
-    }
-    if (pass !== rePass) {
-      isValid = false;
-    }
-    if (isValid) {
-      this.classPass = 'form-control is-valid'
-    } else {
-      this.classPass = 'form-control is-invalid'
-    }
-    return isValid
-  }
   doRegister(form) {
+    let validMail = false;
+    let validPass = false;
+    let validName = false;
     let currentUser = {
       id: this.dataUser.length + 1, ...form.value, favorite: []
+    };
+    if (form.value.fullName) {
+      validName = true;
+      this.className = 'form-control is-valid'
+    } else {
+      validName = false;
+      this.className = 'form-control is-invalid';
     }
-    if (this.checkEmail(form.value.email) && this.checkForm(form.value.pass, form.value.rePass) && form.status == 'VALID') {
+
+    if (this.userService.validateEmail(form.value.email) && !this.userService.checkMail(form.value.email, this.dataUser)) {
+      validMail = true;
+      this.classMail = 'form-control is-valid'
+    } else {
+      this.classMail = 'form-control is-invalid';
+      validMail = false;
+    }
+    
+    if (form.value.pass) {
+      if (this.userService.checkPass(form.value.pass, form.value.rePass)) {
+        validPass = true;
+        this.classPass = 'form-control is-valid'
+      }
+      else {
+        validPass = false;
+        this.classPass = 'form-control is-invalid';
+      }
+    } else {
+      validPass = false;
+      this.classPass = 'form-control is-invalid'
+    }
+
+    if (validName && validPass && validMail) {
       this.api.post(ENDPOINT.users, currentUser);
       this.route.navigateByUrl('/login')
     }

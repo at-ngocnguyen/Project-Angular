@@ -1,11 +1,24 @@
-<div class="form-group">
-  <label for="usename">Username</label>
-  <input type="text" name="usename" class="form-control" id="usename" (input)="checkType()">
-  <label for="usename">Password</label>
+<form #templateForm="ngForm" (ngSubmit)="editProfile(templateForm)">
 
-  <input type={{statePass}} name="password" class="form-control relative" id="password" (input)="checkType()">
+  <div class="input-container">
+    <i class="fa fa-user icon"></i>
+    <input type="text" id="fullName" name="fullName" class={{className}} placeholder="Họ và tên" minlength="8"
+      #resultName="ngModel" [ngModel]="data.fullName" required (input)="checkType()">
+
+  </div>
+
+  <div class="input-container">
+    <i class="fa fa-envelope icon"></i>
+    <input type="email" id="email" class={{classMail}} name="email" placeholder="Email đăng ký" #resultMail="ngModel"
+      [(ngModel)]="data.email" disabled required>
+  </div>
+
+  <div class="input-container">
+    <i class="fa fa-key icon"></i>
+    <input type={{statePass}} id="password" name="pass" placeholder="Mật khẩu" #resultPass="ngModel" class={{classPass}}
+      [(ngModel)]="data.pass" required (input)="checkType()">
+  </div>
   <i class="absolute" [class]="show?'fas fa-eye-slash':'fas fa-eye'" (click)="showPass()"></i>
 
-
-
-</div>
+  <button type="submit" class="btn-submit" style="float: right;">Edit Profile</button>
+</form>

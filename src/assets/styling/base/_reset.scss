@@ -1,5 +1,5 @@
 html, body, div, span, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+h1, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, address,
 del, em, img, small, strong, b, u, i, hr,
 dl, dt, dd, ol, ul, li,
@@ -12,6 +12,7 @@ button,
 time, mark, audio, video {
   margin: 0;
   padding: 0;
+  font-size: 100%;
   vertical-align: baseline;
   word-wrap: break-word;
 }

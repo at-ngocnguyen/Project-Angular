@@ -6,7 +6,12 @@ import { BehaviorSubject } from 'rxjs';
   providedIn: 'root'
 })
 export class AuthService {
+  user = new BehaviorSubject<string>(this.local.getLocalStorage('TOKEN') ? this.local.getLocalStorage('TOKEN').currentUser : {})
+  currentUser = this.user.asObservable();
 
+  changeUser(user: any) {
+    this.user.next(user)
+  }
   isLogin = new BehaviorSubject<boolean>(this.local.getLocalStorage('TOKEN') ? true : false);
   currentStatus = this.isLogin.asObservable();
 
@@ -18,5 +23,4 @@ export class AuthService {
     this.isLogin.next(status);
   }
 
-  
 }

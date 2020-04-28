@@ -21,12 +21,12 @@ export class HomeComponent implements OnInit {
 		private route: Router
 	) { }
 
-	email = this.localer.getLocalStorage('TOKEN') ? this.localer.getLocalStorage('TOKEN').email : false
+	email = this.localer.getLocalStorage('TOKEN') ? this.localer.getLocalStorage('TOKEN').currentUser.email : false
 
 	curentFa: any
 
 	checkFa(array, category) {
-
+		
 		this.apiService.get(ENDPOINT.users, '?email=' + this.email).subscribe(e => {
 			this.curentFa = e[0].favorite
 			for (let i = 0; i < array.length; i++) {
