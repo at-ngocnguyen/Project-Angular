@@ -1,5 +1,5 @@
 .footer {
-  color: white;
+  color: map-get($map: $color, $key: secondary);
 
   .links {
     ul {
@@ -7,12 +7,12 @@
     }
 
     li a {
-      color: white;
+      color: map-get($map: $color, $key: secondary);
       transition: color .2s;
 
       &:hover {
         text-decoration: none;
-        color: #4180CB;
+        color: map-get($map: $color, $key: primary);
       }
     }
   }
@@ -27,7 +27,7 @@
       transition: color .2s;
 
       &:hover {
-        color: #4180CB
+        color: map-get($map: $color, $key: primary);
       }
     }
   }
@@ -39,6 +39,6 @@
   }
 
   .copyright p {
-    border-top: 1px solid rgba(255, 255, 255, .1);
+    border-top: 1px solid map-get($map: $color, $key: border);
   }
 }

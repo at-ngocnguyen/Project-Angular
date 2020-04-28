@@ -35,22 +35,22 @@
           "state": true
         },
         {
-          "id": 1,
-          "name": "BIOTIN 5mg",
-          "img": "../../../assets/img/tkd/1.jpg",
-          "price": 165,
-          "inventory": 69,
-          "description": "Với nghĩa vụ phục vụ cho sức khỏe của khách hàng, chúng tôi đem đến những sản phẩm tốt nhất và giá cả phải chăng nhất đến với khách hàng, đến với chúng tôi các bạn sẽ được nhận được sự phục vụ tận tình từ các nhân viên, dược sĩ của chúng tôi.",
-          "category": 1,
-          "state": true
-        },
-        {
           "id": 2,
           "name": "IVERMECTIN MIC 6mg",
           "img": "../../../assets/img/tkd/2.jpg",
           "price": 165,
           "inventory": "",
           "category": 1,
+          "state": true
+        },
+        {
+          "id": 22,
+          "name": "Nước hồng sâm Hongsamjin Gold 100mL",
+          "img": "../../../assets/img/tpcn/2.jpg",
+          "price": 210,
+          "inventory": 10,
+          "description": "Với nghĩa vụ phục vụ cho sức khỏe của khách hàng, chúng tôi đem đến những sản phẩm tốt nhất và giá cả phải chăng nhất đến với khách hàng, đến với chúng tôi các bạn sẽ được nhận được sự phục vụ tận tình từ các nhân viên, dược sĩ của chúng tôi.",
+          "category": 3,
           "state": true
         }
       ]
@@ -73,6 +73,14 @@
           "state": true
         }
       ]
+    },
+    {
+      "id": 3,
+      "fullName": "Phan Thi Lieu",
+      "email": "123123123@123.com",
+      "pass": "123123123",
+      "rePass": "123123123",
+      "favorite": []
     }
   ],
   "products": [

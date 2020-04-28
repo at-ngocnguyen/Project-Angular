@@ -1,8 +1,4 @@
 import { Injectable } from '@angular/core';
-import { ApiService, ENDPOINT } from '../service/api/api.service';
-import { LocalerService } from '../service/localer/localer.service';
-import { BehaviorSubject } from 'rxjs';
-
 
 @Injectable({
   providedIn: 'root'
@@ -10,6 +6,7 @@ import { BehaviorSubject } from 'rxjs';
 export class UserService {
 
   constructor(
+
   ) { }
 
   validateEmail(email) {
@@ -29,5 +26,21 @@ export class UserService {
     }
     return index;
   }
+  checkMail(mail, userData) {
+    let isValid = false;
+    for (let i = 0; i < userData.length; i++)
+      if (mail === userData[i].email) {
+        isValid = true;
+        break;
+      }
+    return isValid
+  }
+  checkPass(pass, secondPass) {
+    let isValid = false;
+    if (pass === secondPass) {
+      isValid = true;
+    }
 
+    return isValid
+  }
 }

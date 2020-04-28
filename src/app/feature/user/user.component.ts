@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { LocalerService } from 'src/app/core/service/localer/localer.service';
 import { ApiService, ENDPOINT } from 'src/app/core/service/api/api.service';
+import { AuthService } from 'src/app/core/service/auth/auth.service';
 
 @Component({
   selector: 'app-user',
@@ -8,17 +9,16 @@ import { ApiService, ENDPOINT } from 'src/app/core/service/api/api.service';
   styleUrls: ['./user.component.scss']
 })
 export class UserComponent implements OnInit {
-  data: any;
+  data: string;
   email = this.localer.getLocalStorage('TOKEN') ? this.localer.getLocalStorage('TOKEN').email : false
   constructor(
     private localer: LocalerService,
-    private api: ApiService
+    private auth: AuthService
   ) { }
 
   ngOnInit(): void {
-    this.api.get(ENDPOINT.users, '?email=' + this.email).subscribe(e => {
-      this.data = e[0]
-    });
+    this.auth.currentUser.subscribe(e => { this.data = e; }
+    )
   }
 
 }
