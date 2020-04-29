@@ -53,7 +53,7 @@ export class RegisterComponent implements OnInit {
       this.classMail = 'form-control is-invalid';
       validMail = false;
     }
-    
+
     if (form.value.pass) {
       if (this.userService.checkPass(form.value.pass, form.value.rePass)) {
         validPass = true;
