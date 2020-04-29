@@ -1,29 +1,35 @@
 <div class="page">
   <div class="wrapper">
     <div id="formContent">
+
       <h2>Đăng ký</h2>
       <form #templateForm="ngForm" (ngSubmit)="doRegister(templateForm)">
 
-        <input type="text" id="fullName" class="fadeIn second" name="fullName" placeholder="Full name" minlength="8"
-          #resultName="ngModel" [(ngModel)]="fullName" required>
-        <p *ngIf="resultName.invalid && (resultName.dirty || resultName.touched)">Vui lòng kiểm tra lại trường</p>
+        <div class="input-container">
+          <i class="fa fa-user icon"></i>
+          <input type="text" id="fullName" name="fullName" class={{className}} placeholder="Họ và tên" minlength="8"
+            #resultName="ngModel" [(ngModel)]="fullName" required>
+        </div>
 
-        <input type="email" id="email" class="fadeIn second" name="email" placeholder="Email" #resultMail="ngModel"
-          [(ngModel)]="email" required>
-        <p *ngIf="resultMail.invalid && (resultMail.dirty || resultMail.touched)">Vui lòng kiểm tra lại trường</p>
+        <div class="input-container">
+          <i class="fa fa-envelope icon"></i>
+          <input type="email" id="email" class={{classMail}} name="email" placeholder="Email đăng ký"
+            #resultMail="ngModel" [(ngModel)]="email" required>
+        </div>
 
-        <input type="password" id="password" name="pass" placeholder="Password" #resultPass="ngModel" [(ngModel)]="pass"
-          required>
-        <p *ngIf="resultPass.invalid && (resultPass.dirty || resultPass.touched)">Vui lòng kiểm tra lại trường</p>
+        <div class="input-container">
+          <i class="fa fa-key icon"></i>
+          <input type="password" id="password" name="pass" placeholder="Mật khẩu" #resultPass="ngModel"
+            class={{classPass}} [(ngModel)]="pass" required>
+        </div>
+        <div class="input-container">
+          <i class="fa fa-key icon"></i>
+          <input type="password" id="rePass" name="rePass" placeholder="Xác nhận mật khẩu" #resultRePass="ngModel"
+            class={{classPass}} [(ngModel)]="rePass" required>
+        </div>
 
-        <input type="password" id="password" name="rePass" placeholder="Comfirm Password" #resultRePass="ngModel"
-          [(ngModel)]="rePass" required>
-        <p *ngIf="resultRePass.invalid && (resultRePass.dirty || resultRePass.touched)">Vui lòng kiểm tra lại trường</p>
-
-        <input type="submit" value="Sign In">
-
+        <button type="submit" class="btn-submit">Đăng ký</button>
       </form>
-
     </div>
   </div>
 </div>

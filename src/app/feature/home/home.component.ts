@@ -21,7 +21,7 @@ export class HomeComponent implements OnInit {
 		private route: Router
 	) { }
 
-	email = this.localer.getLocalStorage('TOKEN') ? this.localer.getLocalStorage('TOKEN').email : false
+	email = this.localer.getLocalStorage('TOKEN') ? this.localer.getLocalStorage('TOKEN').currentUser.email : false
 
 	curentFa: any
 
@@ -58,7 +58,7 @@ export class HomeComponent implements OnInit {
 	ngOnInit(): void {
 		this.auth.currentStatus.subscribe(e => this.isLogin = e);
 		this.apiService.get(ENDPOINT.products, '/?category=1&_limit=4').subscribe(e => {
-			this.tkd = e;
+			this.tkd = e;		
 			if (this.email) {
 				this.checkFa(e, 1)
 			}

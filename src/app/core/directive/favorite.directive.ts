@@ -9,7 +9,7 @@ import { Router } from '@angular/router';
 })
 export class FavoriteDirective {
   @Input() node: any;//get value of data object when click 
-  email = this.localer.getLocalStorage('TOKEN') ? this.localer.getLocalStorage('TOKEN').email : false
+  email = this.localer.getLocalStorage('TOKEN') ? this.localer.getLocalStorage('TOKEN').currentUser.email : false
   dataUser: any;
   constructor(
     private localer: LocalerService,
@@ -20,7 +20,9 @@ export class FavoriteDirective {
 
   @HostListener('click', ['$event.target'])
   onClick(element: any) {
+    
     if (this.email) {
+      
       if (element.nodeName === 'I') {//get Element I has clicked
 
         this.api.get(ENDPOINT.users, '?email=' + this.email).subscribe(e => {

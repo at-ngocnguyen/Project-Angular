@@ -26,7 +26,7 @@ export class TkdComponent implements OnInit {
   ngOnInit(): void {
     this.auth.currentStatus.subscribe(e => this.isLogin = e);
     this.apiService.get(ENDPOINT.products, '/?category=1').subscribe(e => {
-      this.data = e; console.log(this.data);
+      this.data = e; 
     })
   }
 

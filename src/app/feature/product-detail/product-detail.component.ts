@@ -25,8 +25,6 @@ export class ProductDetailComponent implements OnInit {
     private route: Router
   ) { }
   getDetail(product) {
-    console.log(product);
-
     this.localer.saveLocalStorage(product, 'DETAIL')
     this.route.navigateByUrl('detail')
   }

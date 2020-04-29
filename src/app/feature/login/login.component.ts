@@ -15,7 +15,8 @@ export class LoginComponent implements OnInit {
   userData: any;
   pass: string;
   email: string;
-
+  classMail: string = 'form-control';
+  classPass: string = 'form-control';
   constructor(
     private ath: AuthService,
     private apiService: ApiService,
@@ -25,17 +26,36 @@ export class LoginComponent implements OnInit {
   ) { }
 
   doLogin(form) {
+
+    let isSubmit = false;
+    let currentUser: any;
     for (let i = 0; i < this.userData.length; i++) {
-      if (this.userData[i].email === form.value.mail || this.userData[i].password === form.value.pass) {
-        let status = true
-        this.ath.changeSatusLogin(status);
-        this.local.saveLocalStorage({ email:this.email }, 'TOKEN')
-        this.router.navigateByUrl('/')
+
+      if (form.value.email === this.userData[i].email && form.value.pass === this.userData[i].pass) {
+        isSubmit = true;
+        this.classMail = 'form-control is-valid'
+        this.classPass = 'form-control is-valid'
+        currentUser = this.userData[i]
+        break;
+      } else {
+        this.classMail = 'form-control is-invalid';
+        this.classPass = 'form-control is-invalid';
+        isSubmit = false;
       }
+    }
+    if (isSubmit) {
+      this.ath.changeSatusLogin(isSubmit);
+      this.ath.changeUser(currentUser)
+
+      this.local.saveLocalStorage({ currentUser: currentUser }, 'TOKEN')
+      this.router.navigateByUrl('/')
+
     }
   }
 
+
   ngOnInit(): void {
+
     this.apiService.get(ENDPOINT.users, '').subscribe(e => {
       this.userData = e
     })

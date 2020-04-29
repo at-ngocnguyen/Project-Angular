@@ -20,14 +20,14 @@
           <a class="nav-link" href="./products/thucphamchucnang">Thực phẩm chức năng</a>
         </li>
       </ul>
-      <span class="navbar-text" *ngIf="!isLogged">
-        <a class="login-text" routerLink="login">Login</a>
-        <a routerLink="register">Register</a>
-      </span>
-      <span class="navbar-text" *ngIf="isLogged">
-        <a class="login-text" routerLink="/user">Profile</a>
-        <button (click)="logOut()" class="btn"> <a>Logout</a></button>
-      </span>
+      <div *ngIf="!isLogged">
+        <a class="btn btn-link" routerLink="login">Login</a>
+        <a class="btn btn-link" routerLink="register">Register</a>
+      </div>
+      <div class="navbar-text" *ngIf="isLogged">
+        <a class="btn btn-link" routerLink="/user">Profile</a>
+        <button (click)="logOut()" class="btn btn-link"> <a>Logout</a></button>
+      </div>
     </div>
   </nav>
 </div>
