@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { LocalerService } from 'src/app/core/service/localer/localer.service';
 import { Router } from '@angular/router';
+import { UserService } from 'src/app/core/user/user.service';
 // import {SimpleTimer} from 'ng2-simple-timer';
 @Component({
   selector: 'app-introduce',
@@ -22,12 +23,14 @@ export class IntroduceComponent implements OnInit {
   }
   constructor(
     private localer: LocalerService,
-    private route: Router
+    private route: Router,
+    private userService:UserService
   ) { }
 
   getDetail(product) {
-    this.localer.saveLocalStorage(product, 'DETAIL')
-    this.route.navigateByUrl('/detail')
+    this.localer.saveLocalStorage({ currentProduct: product }, 'DETAIL');
+    this.userService.changeProduct(product)
+    this.route.navigateByUrl('/detail/' + product.id)
   }
   ngOnInit(): void {
     if (this.data.categoryId == 1) {

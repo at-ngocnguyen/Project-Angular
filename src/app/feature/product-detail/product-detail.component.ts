@@ -3,6 +3,7 @@ import { LocalerService } from 'src/app/core/service/localer/localer.service';
 import { AuthService } from 'src/app/core/service/auth/auth.service';
 import { ApiService, ENDPOINT } from 'src/app/core/service/api/api.service';
 import { Router, ActivatedRoute } from '@angular/router';
+import { UserService } from 'src/app/core/user/user.service';
 
 @Component({
   selector: 'app-product-detail',
@@ -23,41 +24,43 @@ export class ProductDetailComponent implements OnInit {
     private apiService: ApiService,
     private localer: LocalerService,
     private route: Router,
-    private activateRoute: ActivatedRoute
+    private userService: UserService
   ) { }
-  getDetail(product) {
-    this.localer.saveLocalStorage(product, 'DETAIL')
-    this.route.navigateByUrl('detail')
-  }
+
   checkFa() {
     if (this.idUser) {
       this.apiService.get(ENDPOINT.users, '/' + this.idUser).subscribe(e => {
-
-        this.curentFa = e.favorite
-
-        if (this.data.id === this.curentFa.id) {
-          this.curentFa.state = true;
-          this.data = this.curentFa
-
+        this.curentFa = JSON.parse(e.favorite)
+        for (let i = 0; i < this.curentFa.length; i++) {
+          if (this.data.id === this.curentFa[i].id) {
+            this.curentFa[i].state = true;
+            this.data = this.curentFa[i]
+            break;
+          }
         }
       }
       );
     }
   }
+
+  getDetail(product) {
+    this.localer.saveLocalStorage(product, 'DETAIL');
+    this.userService.changeProduct(product);
+    this.route.navigateByUrl('/detail/' + product.id);
+  }
+
   ngOnInit(): void {
 
+    this.userService.currentProduct.subscribe(e => {
+      this.data = e
+      this.checkFa();
+    })
 
-    this.data = this.local.getLocalStorage('DETAIL');
-
-    this.checkFa();
     this.auth.currentStatus.subscribe(e => {
-      this.isLogin = e;
-    })
-    this.activateRoute.params.subscribe(e => {
-      console.log(e);
-    })
+      this.isLogin = e
+    });
+
     this.apiService.get(ENDPOINT.category, '/' + this.data.categoryId + '/products?page=1&limit=4').subscribe(e => {
-      console.log(e);
       this.category = e
     });
 

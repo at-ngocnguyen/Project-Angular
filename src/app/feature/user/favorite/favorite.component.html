@@ -1,7 +1,5 @@
 <section class="category">
-  <h2>Favorite Product</h2>
   <div class="flex-box">
-    <p *ngIf="!data">Bạn chưa có sản phẩn ưu thích nào, nhấn vào <a>đây</a> để lựa chọn sản phẩm</p>
     <div *ngFor="let item of data">
       <div class="products">
         <p>{{item.name}}</p>

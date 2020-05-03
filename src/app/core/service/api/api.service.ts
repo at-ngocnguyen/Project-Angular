@@ -27,7 +27,7 @@ export class ApiService {
     * @param url : path from ENDPOINT
     * @param params : ex: {key: value}
     */
-  get(url: string, params?: any): Observable<any> {
+  get(url: string, params?: any): Observable<any> {    
     return this.http.get(API_DOMAIN + url + params).pipe(
       catchError(this.handleError)
     );

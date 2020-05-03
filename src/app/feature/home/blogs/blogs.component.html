@@ -6,9 +6,9 @@
       <div>
         <div class="news">
 
-          <img src={{news.img}} class="detail--img__100 " alt="" />
+          <a href={{news.link}} target="_blank"><img src={{news.img}} class="detail--img__100 " alt="" /></a>
           <div>
-            <h5>{{news.tittle}}</h5>
+            <h5> <a href={{news.link}} target="_blank">{{news.tittle}}</a></h5>
             <p class="card-p">Đăng bởi {{news.author}} | {{news.date}} </p>
             <p class="card-text">{{news.content}}</p>
             <button class="btn btn-link"> <a href={{news.link}} target="_blank">Xem thêm</a></button>
@@ -17,10 +17,9 @@
       </div>
       <div>
         <div class="news">
-
-          <img src={{news.img}} class="detail--img__100 " alt="" />
+          <a href={{news.link}} target="_blank"><img src={{news.img}} class="detail--img__100 " alt="" /></a>
           <div>
-            <h5>{{news.tittle}}</h5>
+            <h5> <a href={{news.link}} target="_blank">{{news.tittle}}</a></h5>
             <p class="card-p">Đăng bởi {{news.author}} | {{news.date}} </p>
             <p class="card-text">{{news.content}}</p>
             <button class="btn btn-link"> <a href={{news.link}} target="_blank">Xem thêm</a></button>
@@ -28,7 +27,6 @@
         </div>
       </div>
     </div>
-
   </article>
   <div class="col-sm-3">
     <section>

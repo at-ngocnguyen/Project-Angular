@@ -1,4 +1,4 @@
 export const environment = {
   production: true,
-  api: 'http://localhost:3000/'
+  api: 'https://5eae3c924350860016e13dda.mockapi.io/api/'
 };

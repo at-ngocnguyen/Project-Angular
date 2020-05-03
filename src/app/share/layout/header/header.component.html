@@ -21,12 +21,12 @@
         </li>
       </ul>
       <div *ngIf="!isLogged">
-        <a class="btn btn-link" routerLink="login">Login</a>
-        <a class="btn btn-link" routerLink="register">Register</a>
+        <a class="btn btn-link" routerLink="login">Đăng Nhập</a>
+        <a class="btn btn-link" routerLink="register">Đăng ký</a>
       </div>
-      <div class="navbar-text" *ngIf="isLogged">
-        <a class="btn btn-link" routerLink="/user">Profile</a>
-        <button (click)="logOut()" class="btn btn-link"> <a>Logout</a></button>
+      <div *ngIf="isLogged">
+        <a class="btn btn-link" routerLink="/user">Thông tin</a>
+        <button (click)="logOut()" class="btn btn-link"> <a>Đăng xuất</a></button>
       </div>
     </div>
   </nav>

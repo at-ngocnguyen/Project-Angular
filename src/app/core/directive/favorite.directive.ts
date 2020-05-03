@@ -21,9 +21,8 @@ export class FavoriteDirective {
   @HostListener('click', ['$event.target'])
   onClick(element: any) {
 
-    if (this.idUser) {
-
-      if (element.nodeName === 'I') {//get Element I has clicked
+    if (element.nodeName === 'I') {//get Element I has clicked
+      if (this.idUser) {
         console.log(this.node);
 
         this.api.get(ENDPOINT.users, '/' + this.idUser).subscribe(e => {
@@ -47,10 +46,11 @@ export class FavoriteDirective {
           }
         });
       }
-    } else {
-      let retVal = confirm('Vui lòng đăng nhập để thực hiện chức năng này!');
-      if (retVal) {
-        this.route.navigateByUrl('/login')
+      else {
+        let retVal = confirm('Vui lòng đăng nhập để thực hiện chức năng này!');
+        if (retVal) {
+          this.route.navigateByUrl('/login')
+        }
       }
     }
   }

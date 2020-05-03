@@ -1,4 +1,6 @@
 import { Injectable } from '@angular/core';
+import { BehaviorSubject } from 'rxjs';
+import { LocalerService } from '../service/localer/localer.service';
 
 @Injectable({
   providedIn: 'root'
@@ -6,11 +8,15 @@ import { Injectable } from '@angular/core';
 export class UserService {
 
   constructor(
-
+    private local: LocalerService
   ) { }
 
-  getDetail(product: any) {
+  product = new BehaviorSubject<any>(this.local.getLocalStorage('DETAIL') ? this.local.getLocalStorage('DETAIL').currentProduct : {})
+  
+  currentProduct = this.product.asObservable();
 
+  changeProduct(product: any) {
+    this.product.next(product)
   }
 
   validateEmail(email) {
@@ -46,4 +52,6 @@ export class UserService {
     }
     return isValid
   }
+
+
 }
