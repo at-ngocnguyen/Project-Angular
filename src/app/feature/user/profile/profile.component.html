@@ -1,4 +1,4 @@
-<form #templateForm="ngForm" (ngSubmit)="editProfile(templateForm)">
+<form #templateForm="ngForm" (ngSubmit)="editProfile(templateForm)" class="clr">
 
   <div class="input-container">
     <i class="fa fa-user icon"></i>
@@ -9,8 +9,7 @@
 
   <div class="input-container">
     <i class="fa fa-envelope icon"></i>
-    <input type="email" id="email" name="email" placeholder="Email đăng ký" 
-      [ngModel]="data?.email" disabled required>
+    <input type="email" id="email" name="email" placeholder="Email đăng ký" [ngModel]="data?.email" disabled required>
   </div>
 
   <div class="input-container">

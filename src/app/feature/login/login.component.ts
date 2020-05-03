@@ -46,10 +46,8 @@ export class LoginComponent implements OnInit {
     if (isSubmit) {
       this.ath.changeSatusLogin(isSubmit);
       this.ath.changeUser(currentUser)
-
-      this.local.saveLocalStorage({ currentUser: currentUser }, 'TOKEN')
+      this.local.saveLocalStorage({ currentUser: currentUser }, 'TOKEN');
       this.router.navigateByUrl('/')
-
     }
   }
 
@@ -57,6 +55,7 @@ export class LoginComponent implements OnInit {
   ngOnInit(): void {
 
     this.apiService.get(ENDPOINT.users, '').subscribe(e => {
+      console.log(e);
       this.userData = e
     })
   }

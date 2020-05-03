@@ -70,6 +70,13 @@ export class ApiService {
   //   );
   // }
   //put json-server
+  putFa(url: string, params: any) {
+    const axios = require('axios');
+    params.favorite = JSON.stringify(params.favorite);
+    axios.put(API_DOMAIN + url, params).catch(error => {
+      console.log(error);
+    });
+  }
   put(url: string, params: any) {
     const axios = require('axios');
     axios.put(API_DOMAIN + url, params).catch(error => {

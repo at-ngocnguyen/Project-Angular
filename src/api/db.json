@@ -1,20 +1,16 @@
 {
-  "admin": [
-    {
-      "id": 1,
-      "admin": "admin",
-      "password": "admin"
-    }
-  ],
-  "users": [
-    {
+  "admin": [{
+    "id": 1,
+    "admin": "admin",
+    "password": "admin"
+  }],
+  "users": [{
       "id": 1,
       "fullName": "Nguyễn Thự Song Ngọc",
       "email": "nguyenthusongngoc@gmail.com",
       "pass": "123123123",
       "rePass": "123123123",
-      "favorite": [
-        {
+      "favorite": [{
           "id": 7,
           "name": "BOCALEX",
           "img": "assets/img/tkd/7.jpg",
@@ -42,16 +38,6 @@
           "inventory": "",
           "category": 1,
           "state": true
-        },
-        {
-          "id": 1,
-          "name": "BIOTIN 5mg",
-          "img": "assets/img/tkd/1.jpg",
-          "price": 165,
-          "inventory": 69,
-          "description": "Với nghĩa vụ phục vụ cho sức khỏe của khách hàng, chúng tôi đem đến những sản phẩm tốt nhất và giá cả phải chăng nhất đến với khách hàng, đến với chúng tôi các bạn sẽ được nhận được sự phục vụ tận tình từ các nhân viên, dược sĩ của chúng tôi.",
-          "category": 1,
-          "state": true
         }
       ]
     },
@@ -61,18 +47,16 @@
       "email": "nguyennaodo@gmail.com",
       "pass": "123123123",
       "rePass": "123123123",
-      "favorite": [
-        {
-          "id": 1,
-          "name": "BIOTIN 5mg",
-          "img": "assets/img/tkd/1.jpg",
-          "price": 165,
-          "inventory": 69,
-          "description": "Với nghĩa vụ phục vụ cho sức khỏe của khách hàng, chúng tôi đem đến những sản phẩm tốt nhất và giá cả phải chăng nhất đến với khách hàng, đến với chúng tôi các bạn sẽ được nhận được sự phục vụ tận tình từ các nhân viên, dược sĩ của chúng tôi.",
-          "category": 1,
-          "state": true
-        }
-      ]
+      "favorite": [{
+        "id": 1,
+        "name": "BIOTIN 5mg",
+        "img": "assets/img/tkd/1.jpg",
+        "price": 165,
+        "inventory": 69,
+        "description": "Với nghĩa vụ phục vụ cho sức khỏe của khách hàng, chúng tôi đem đến những sản phẩm tốt nhất và giá cả phải chăng nhất đến với khách hàng, đến với chúng tôi các bạn sẽ được nhận được sự phục vụ tận tình từ các nhân viên, dược sĩ của chúng tôi.",
+        "category": 1,
+        "state": true
+      }]
     },
     {
       "id": 3,
@@ -91,8 +75,7 @@
       "favorite": []
     }
   ],
-  "products": [
-    {
+  "products": [{
       "id": 1,
       "name": "BIOTIN 5mg",
       "img": "assets/img/tkd/1.jpg",
@@ -362,8 +345,7 @@
       "category": 3
     }
   ],
-  "category": [
-    {
+  "category": [{
       "id": 1,
       "name": "Thuốc kê đơn",
       "status": true

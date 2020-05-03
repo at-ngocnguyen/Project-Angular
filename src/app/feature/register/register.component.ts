@@ -36,7 +36,7 @@ export class RegisterComponent implements OnInit {
     let validPass = false;
     let validName = false;
     let currentUser = {
-      id: this.dataUser.length + 1, ...form.value, favorite: []
+      id: this.dataUser.length + 1, ...form.value, favorite: '[]'
     };
     if (form.value.fullName) {
       validName = true;
@@ -70,7 +70,10 @@ export class RegisterComponent implements OnInit {
 
     if (validName && validPass && validMail) {
       this.api.post(ENDPOINT.users, currentUser);
-      this.route.navigateByUrl('/login')
+      setTimeout(() => {
+        this.route.navigateByUrl('/login')
+      }, 2000);
+
     }
   }
 }

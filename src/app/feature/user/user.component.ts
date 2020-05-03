@@ -13,12 +13,12 @@ export class UserComponent implements OnInit {
 
   constructor(
     private localer: LocalerService,
-    private auth: AuthService
+    private auth: AuthService,
+    private apiService: ApiService,
   ) { }
-
+  idUser = this.localer.getLocalStorage('TOKEN') ? this.localer.getLocalStorage('TOKEN').currentUser.id : false
   ngOnInit(): void {
-    this.auth.currentUser.subscribe(e => { this.data = e; }
-    )
+    this.auth.currentUser.subscribe(e => { this.data = e; })
   }
 
 }
