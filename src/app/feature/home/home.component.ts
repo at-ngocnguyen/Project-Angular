@@ -21,17 +21,15 @@ export class HomeComponent implements OnInit {
 		private route: Router
 	) { }
 
-	email = this.localer.getLocalStorage('TOKEN') ? this.localer.getLocalStorage('TOKEN').currentUser.email : false
+	idUser = this.localer.getLocalStorage('TOKEN') ? this.localer.getLocalStorage('TOKEN').currentUser.id : false
 
 	curentFa: any
 
 	checkFa(array, category) {
 
-		this.apiService.get(ENDPOINT.users, '?email=' + this.email).subscribe(e => {
-			this.curentFa = e[0].favorite
+		this.apiService.get(ENDPOINT.users, '/' + this.idUser).subscribe(e => {
+			this.curentFa = JSON.parse(e.favorite);
 			for (let i = 0; i < array.length; i++) {
-
-
 				for (let j = 0; j < this.curentFa.length; j++) {
 					if (array[i].id === this.curentFa[j].id) {
 						array[i].state = true;
@@ -57,21 +55,21 @@ export class HomeComponent implements OnInit {
 	}
 	ngOnInit(): void {
 		this.auth.currentStatus.subscribe(e => this.isLogin = e);
-		this.apiService.get(ENDPOINT.products, '/?category=1&_limit=4').subscribe(e => {
-			this.tkd = e;		
-			if (this.email) {
+		this.apiService.get(ENDPOINT.category, '/1/products?page=1&limit=4').subscribe(e => {
+			this.tkd = e;
+			if (this.idUser) {
 				this.checkFa(e, 1)
 			}
 		});
-		this.apiService.get(ENDPOINT.products, '/?category=2&_limit=4').subscribe(e => {
+		this.apiService.get(ENDPOINT.category, '/2/products?page=1&limit=4').subscribe(e => {
 			this.tkkd = e
-			if (this.email) {
+			if (this.idUser) {
 				this.checkFa(e, 2)
 			}
 		});
-		this.apiService.get(ENDPOINT.products, '/?category=3&_limit=4').subscribe(e => {
+		this.apiService.get(ENDPOINT.category, '/3/products?page=1&limit=4').subscribe(e => {
 			this.tpcn = e
-			if (this.email) {
+			if (this.idUser) {
 				this.checkFa(e, 3)
 			}
 		});

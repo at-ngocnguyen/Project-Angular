@@ -4,6 +4,7 @@ import { ProductsComponent } from './products.component';
 import { TkdComponent } from './tkd/tkd.component';
 import { TkkdComponent } from './tkkd/tkkd.component';
 import { TpcnComponent } from './tpcn/tpcn.component';
+import { ProductDetailComponent } from '../product-detail/product-detail.component';
 
 
 const routes: Routes = [
@@ -22,6 +23,10 @@ const routes: Routes = [
       {
         path: 'thucphamchucnang',
         component: TpcnComponent
+      },
+      {
+        path: ':id',
+        component: ProductDetailComponent
       }
     ]
   }

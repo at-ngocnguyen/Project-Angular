@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { LocalerService } from 'src/app/core/service/localer/localer.service';
 import { AuthService } from 'src/app/core/service/auth/auth.service';
 import { ApiService, ENDPOINT } from 'src/app/core/service/api/api.service';
-import { Router } from '@angular/router';
+import { Router, ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-product-detail',
@@ -15,46 +15,56 @@ export class ProductDetailComponent implements OnInit {
   isLogin: boolean;
   ctg: string;
   category: any;
-  email = this.localer.getLocalStorage('TOKEN') ? this.localer.getLocalStorage('TOKEN').email : false
+  idUser = this.localer.getLocalStorage('TOKEN') ? this.localer.getLocalStorage('TOKEN').currentUser.id : false
   curentFa: any
   constructor(
     private local: LocalerService,
     private auth: AuthService,
     private apiService: ApiService,
     private localer: LocalerService,
-    private route: Router
+    private route: Router,
+    private activateRoute: ActivatedRoute
   ) { }
   getDetail(product) {
     this.localer.saveLocalStorage(product, 'DETAIL')
     this.route.navigateByUrl('detail')
   }
   checkFa() {
-    if (this.email) {
-      this.apiService.get(ENDPOINT.users, '?email=' + this.email).subscribe(e => {
-        this.curentFa = e[0].favorite
-        for (let j = 0; j < this.curentFa.length; j++) {
-          if (this.data.id === this.curentFa[j].id) {
-            this.curentFa[j].state = true;
-            this.data = this.curentFa[j]
-          }
+    if (this.idUser) {
+      this.apiService.get(ENDPOINT.users, '/' + this.idUser).subscribe(e => {
+
+        this.curentFa = e.favorite
+
+        if (this.data.id === this.curentFa.id) {
+          this.curentFa.state = true;
+          this.data = this.curentFa
+
         }
-      });
+      }
+      );
     }
   }
   ngOnInit(): void {
+
+
     this.data = this.local.getLocalStorage('DETAIL');
+
     this.checkFa();
     this.auth.currentStatus.subscribe(e => {
       this.isLogin = e;
     })
-
-    this.apiService.get(ENDPOINT.products, '/?category=' + this.data.category + '&_limit=4').subscribe(e => {
+    this.activateRoute.params.subscribe(e => {
+      console.log(e);
+    })
+    this.apiService.get(ENDPOINT.category, '/' + this.data.categoryId + '/products?page=1&limit=4').subscribe(e => {
+      console.log(e);
       this.category = e
     });
 
-    if (this.data.category == 1) {
+
+    if (this.data.categoryId == 1) {
       this.ctg = 'Thuốc kê đơn'
-    } else if (this.data.category == 2) {
+    } else if (this.data.categoryId == 2) {
       this.ctg = 'Thuốc không kê đơn'
     } else {
       this.ctg = 'Thực phẩm chức năng'

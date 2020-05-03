@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { UserService } from 'src/app/core/user/user.service';
 import { ApiService, ENDPOINT } from 'src/app/core/service/api/api.service';
 import { LocalerService } from 'src/app/core/service/localer/localer.service';
 import { AuthService } from 'src/app/core/service/auth/auth.service';
@@ -18,14 +17,15 @@ export class ProfileComponent implements OnInit {
   constructor(
     private apiService: ApiService,
     private localer: LocalerService,
-    private auth: AuthService
+    private auth: AuthService,
+    
   ) { }
 
-  email = this.localer.getLocalStorage('TOKEN') ? this.localer.getLocalStorage('TOKEN').currentUser.email : false
+  idUser = this.localer.getLocalStorage('TOKEN') ? this.localer.getLocalStorage('TOKEN').currentUser.id : false
 
   ngOnInit(): void {
-    this.apiService.get(ENDPOINT.users, '?email=' + this.email).subscribe(e => {
-      this.data = e[0]
+    this.apiService.get(ENDPOINT.users, '/' + this.idUser).subscribe(e => {
+      this.data = e
     });
   }
 
@@ -43,9 +43,9 @@ export class ProfileComponent implements OnInit {
     }
     let dialog = confirm('Bạn có muốn thay đổi thông tin cá nhân không?')
     if (dialog) {
+      this.data = newData;
       this.localer.saveLocalStorage({ currentUser: newData }, 'TOKEN');
       this.auth.changeUser(newData);
-      this.data = newData;
       this.apiService.put(ENDPOINT.users + '/' + this.data.id, newData)
       this.isTyping = false;
     }
