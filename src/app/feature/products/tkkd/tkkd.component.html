@@ -3,7 +3,7 @@
   <app-line></app-line>
   <div class="flex-box-2">
     <div *ngFor="let item of data" appFavorite [node]="item">
-      <div class="products">
+      <div class="product">
         <div (click)="getDetail(item)">
           <img src={{item.img}}>
           <p>{{item.name}}</p>

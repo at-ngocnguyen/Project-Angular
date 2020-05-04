@@ -23,7 +23,6 @@ export class FavoriteDirective {
 
     if (element.nodeName === 'I') {//get Element I has clicked
       if (this.idUser) {
-        console.log(this.node);
 
         this.api.get(ENDPOINT.users, '/' + this.idUser).subscribe(e => {
 

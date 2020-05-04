@@ -24,7 +24,7 @@
         <h4>Giới thiệu</h4>
         <p [class.showmore]="unShow">{{data.description}}</p>
         <button class="btn btn-link" (click)="showMore()" *ngIf="unShow">Xem thêm</button><br>
-        <button class="btn btn-primary" (click)="getDetail(data)">Chi tiết sản phẩm</button>
+        <a routerLink="/detail/{{data.id}}" class="btn btn-primary">Chi tiết sản phẩm</a>
 
       </div>
       <hr>

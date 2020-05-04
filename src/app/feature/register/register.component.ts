@@ -75,6 +75,6 @@ export class RegisterComponent implements OnInit {
         this.route.navigateByUrl('/login')
       }, 2000);
 
-    }  
+    }
   }
 }

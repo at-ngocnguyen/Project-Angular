@@ -14,11 +14,7 @@ img {
 }
 
 a {
-  color: map-get($map: $color, $key: dark);
-
-  &:hover {
-    color: map-get($map: $color, $key: dark);
-  }
+  color: $black;
 }
 
 h2 {
