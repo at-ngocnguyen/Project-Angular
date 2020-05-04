@@ -3,8 +3,10 @@ $blue: #4180CB;
 $yellow:#e6ae48;
 $grey:#f2f2f2;
 $rgba-black: rgba(255, 255, 255, .1);
+$sm:12px;
 $black:#000000;
 $color: (primary: $blue,
   secondary: $white,
   border: $rgba-black,
-  dark: $black, )
+  dark: $black, );
+

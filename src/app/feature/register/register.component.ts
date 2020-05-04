@@ -53,9 +53,10 @@ export class RegisterComponent implements OnInit {
       this.classMail = 'form-control is-invalid';
       validMail = false;
     }
+    console.log(form);
 
     if (form.value.pass) {
-      if (this.userService.checkPass(form.value.pass, form.value.rePass)) {
+      if (this.userService.checkPass(form.value.pass, form.value.rePass) && form.value.pass.length >= 8) {
         validPass = true;
         this.classPass = 'form-control is-valid'
       }
@@ -74,6 +75,6 @@ export class RegisterComponent implements OnInit {
         this.route.navigateByUrl('/login')
       }, 2000);
 
-    }
+    }  
   }
 }

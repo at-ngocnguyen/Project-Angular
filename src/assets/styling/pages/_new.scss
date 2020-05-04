@@ -1,5 +1,6 @@
 .new-product {
   h2 {
+    text-align: center;
     margin: 10px 0;
   }
 
@@ -13,4 +14,8 @@
 
 .news {
   width: 90%;
+  .news-author{
+    font-size: $sm;
+    margin-bottom: 0.5rem;
+  }
 }

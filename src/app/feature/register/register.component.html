@@ -15,7 +15,7 @@
 
   <div class="input-container">
     <i class="fa fa-key icon"></i>
-    <input type="password" id="password" name="pass" placeholder="Mật khẩu" #resultPass="ngModel" class={{classPass}}
+    <input type="password" id="password" name="pass" placeholder="Mật khẩu" #resultPass="ngModel" class={{classPass}} minlength="8"
       [(ngModel)]="pass" required>
   </div>
   <div class="input-container">
