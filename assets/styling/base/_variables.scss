@@ -1,0 +1,9 @@
+$white: #ffff;
+$blue: #4180CB;
+$rgba-black: rgba(255, 255, 255, .1);
+
+$color: (
+	primary: $blue,
+	secondary: $white,
+	border: $rgba-black
+)
