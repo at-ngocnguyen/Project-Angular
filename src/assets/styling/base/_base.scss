@@ -3,32 +3,31 @@
   padding: 0;
   box-sizing: border-box;
   outline: none;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 ul li {
   list-style-type: none;
 }
 
-img {
-  width: 100%;
-}
-
 a {
-  color: map-get($map: $color, $key: dark);
-
-  &:hover {
-    color: map-get($map: $color, $key: dark);
-  }
+  color: $black;
 }
 
 h2 {
+  font-size: 2rem;
   text-align: center;
   font-weight: 600;
   text-transform: uppercase;
+  padding-top: 20px;
 }
 
 .text-center {
   text-align: center;
+}
+
+img {
+  width: 100%;
 }
 
 .clr {
@@ -39,6 +38,34 @@ h2 {
   }
 }
 
-main {
-  padding-top: 50px;
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+  .img-detail {
+    width: 100%;
+  }
+
 }
+
+/* Medium devices (landscape tablets, 768px and down) */
+@media only screen and (max-width: 768px) {
+  h2 {
+    font-size: 1rem;
+  }
+
+  .line-content {
+    width: 100px;
+  }
+}
+
+/* Large devices (laptops/desktops, 769px and up) */
+@media only screen and (min-width: 769px) {
+  .line-content {
+    width: 189px;
+  }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {}

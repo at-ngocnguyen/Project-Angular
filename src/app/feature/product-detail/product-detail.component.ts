@@ -15,16 +15,15 @@ export class ProductDetailComponent implements OnInit {
   data: any;
   isLogin: boolean;
   ctg: string;
+  categoryId: number;
   category: any;
   idUser = this.localer.getLocalStorage('TOKEN') ? this.localer.getLocalStorage('TOKEN').currentUser.id : false
-  curentFa: any
+  curentFa: any;
   constructor(
-    private local: LocalerService,
     private auth: AuthService,
     private apiService: ApiService,
     private localer: LocalerService,
-    private route: Router,
-    private userService: UserService
+    public activateRoute: ActivatedRoute,
   ) { }
 
   checkFa() {
@@ -33,8 +32,7 @@ export class ProductDetailComponent implements OnInit {
         this.curentFa = JSON.parse(e.favorite)
         for (let i = 0; i < this.curentFa.length; i++) {
           if (this.data.id === this.curentFa[i].id) {
-            this.curentFa[i].state = true;
-            this.data = this.curentFa[i]
+            this.data.state = true;
             break;
           }
         }
@@ -43,31 +41,40 @@ export class ProductDetailComponent implements OnInit {
     }
   }
 
-  getDetail(product) {
-    this.localer.saveLocalStorage(product, 'DETAIL');
-    this.userService.changeProduct(product);
-    this.route.navigateByUrl('/detail/' + product.id);
+  getDetail(id: number) {
+    if (id > 0) {
+      if (id >= 1 && id <= 10) {
+        this.categoryId = 1;
+      } else if (id <= 20) {
+        this.categoryId = 2;
+      } else {
+        this.categoryId = 3
+      }
+    }
+    this.apiService.get(ENDPOINT.category, '/' + this.categoryId + '/products/' + id).subscribe(e => {
+      this.data = e
+      this.checkFa();
+    })
   }
+
 
   ngOnInit(): void {
 
-    this.userService.currentProduct.subscribe(e => {
-      this.data = e
-      this.checkFa();
+    this.activateRoute.params.subscribe(data => {
+      this.getDetail(data.id)
     })
 
     this.auth.currentStatus.subscribe(e => {
       this.isLogin = e
     });
 
-    this.apiService.get(ENDPOINT.category, '/' + this.data.categoryId + '/products?page=1&limit=4').subscribe(e => {
+    this.apiService.get(ENDPOINT.category, '/' + this.categoryId + '/products?page=1&limit=4').subscribe(e => {
       this.category = e
     });
 
-
-    if (this.data.categoryId == 1) {
+    if (this.categoryId == 1) {
       this.ctg = 'Thuốc kê đơn'
-    } else if (this.data.categoryId == 2) {
+    } else if (this.categoryId == 2) {
       this.ctg = 'Thuốc không kê đơn'
     } else {
       this.ctg = 'Thực phẩm chức năng'

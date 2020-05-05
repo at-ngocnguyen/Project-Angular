@@ -4,8 +4,26 @@
   right: 0;
 }
 
-.products {
+.close {
+  opacity: 0;
+}
+
+.product {
   position: relative;
-  width: 230px;
+  max-width: 200px;
+  margin: auto;
+}
+
+.price {
+  color: $red;
+
+  &:hover {
+    text-decoration: none !important;
+  }
+}
+
+.fa-error {
+  width: 100%;
+  margin-top: 2rem;
   text-align: center;
 }

@@ -1,11 +1,19 @@
-<section class="category">
-  <div class="flex-box">
-    <div *ngFor="let item of data">
-      <div class="products">
-        <img src={{item.img}}>
-        <p>{{item.name}}</p>
-        <p>{{item.price}}$</p>
+<div class="container">
+  <div class="row">
+    <div *ngFor="let item of data" class="col-sm-3">
+      <div class="product">
+        <a routerLink="/detail/{{item.id}}">
+          <img src={{item.img}}>
+          <p>{{item.name}}</p>
+          <p>{{item.price}}$</p>
+        </a>
+        <div class="favorite">
+          <i class="fas fa-times-circle" style="color:red" (click)="deleteFa(item)"></i>
+        </div>
       </div>
     </div>
+
+    <p class="fa-error" *ngIf="checkFa">Bạn chưa có sản phẩm nào được thêm vào mục này vui lòng <a class="btn-link"
+        routerLink="/home">nhấn vào đây</a> để chọn sản phẩm</p>
   </div>
-</section>
+</div>
