@@ -1,0 +1,9 @@
+.menu-product {
+  width: 40%;
+  margin: auto;
+
+  .selected {
+    width: calc(100%/3);
+    border-bottom: solid $yellow 4px;
+  }
+}

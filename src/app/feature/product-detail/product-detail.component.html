@@ -1,5 +1,5 @@
 <div class="container">
-  <section appFavorite [node]="data" class="detail">
+  <div appFavorite [node]="data" class="detail">
     <div class=" row">
       <div class="col-sm-6 img-detail ">
         <img src={{data?.img}}>
@@ -22,16 +22,19 @@
       </div>
     </div>
 
-  </section>
+  </div>
   <section class="category">
     <h2>Thuốc cùng danh mục</h2>
     <app-line></app-line>
+  
     <div class="row">
       <div *ngFor="let item of category" appFavorite [node]="item" class="col-sm-3">
-        <div>
-          <img src={{item.img}}>
-          <p>{{item.name}}</p>
-          <p>{{item.price}}$</p>
+        <div class="product">
+          <a  routerLink="/detail/{{item.id}}">
+            <img src={{item.img}}>
+            <p>{{item.name}}</p>
+            <p class="price">{{item.price}}$</p>
+          </a>
         </div>
       </div>
     </div>

@@ -1,6 +1,12 @@
 .detail {
 
+  margin: auto;
+
   .img-detail {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60%;
     border: solid 1px $grey;
     border-radius: 5px;
   }

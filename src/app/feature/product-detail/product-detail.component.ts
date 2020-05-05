@@ -32,8 +32,7 @@ export class ProductDetailComponent implements OnInit {
         this.curentFa = JSON.parse(e.favorite)
         for (let i = 0; i < this.curentFa.length; i++) {
           if (this.data.id === this.curentFa[i].id) {
-            this.curentFa[i].state = true;
-            this.data = this.curentFa[i]
+            this.data.state = true;
             break;
           }
         }
@@ -55,7 +54,6 @@ export class ProductDetailComponent implements OnInit {
     this.apiService.get(ENDPOINT.category, '/' + this.categoryId + '/products/' + id).subscribe(e => {
       this.data = e
       this.checkFa();
-
     })
   }
 

@@ -1,6 +1,6 @@
 .footer {
- 
-  color: map-get($map: $color, $key: secondary);
+
+  color: $grey;
 
   .links {
     ul {
@@ -8,7 +8,7 @@
     }
 
     li a {
-      color: map-get($map: $color, $key: secondary);
+      color: $grey;
       transition: color .2s;
 
       &:hover {
