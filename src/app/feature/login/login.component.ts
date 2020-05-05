@@ -31,7 +31,7 @@ export class LoginComponent implements OnInit {
     let currentUser: any;
     for (let i = 0; i < this.userData.length; i++) {
 
-      if (form.value.email === this.userData[i].email && form.value.pass === this.userData[i].pass) {
+      if (form.value.email === this.userData[i].email && form.value.pass === this.userData[i].pass) {        
         isSubmit = true;
         this.classMail = 'form-control is-valid'
         this.classPass = 'form-control is-valid'
@@ -43,6 +43,8 @@ export class LoginComponent implements OnInit {
         isSubmit = false;
       }
     }
+
+    
     if (isSubmit) {
       this.ath.changeSatusLogin(isSubmit);
       this.ath.changeUser(currentUser)
@@ -55,7 +57,7 @@ export class LoginComponent implements OnInit {
   ngOnInit(): void {
 
     this.apiService.get(ENDPOINT.users, '').subscribe(e => {
-      console.log(e);
+
       this.userData = e
     })
   }
