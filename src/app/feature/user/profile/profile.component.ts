@@ -46,10 +46,9 @@ export class ProfileComponent implements OnInit {
       this.data = newData;
       this.localer.saveLocalStorage({ currentUser: newData }, 'TOKEN');
       this.auth.changeUser(newData);
-      this.apiService.put(ENDPOINT.users + '/' + this.data.id, newData)
+      this.apiService.put(ENDPOINT.users + '/' + this.data.id, newData);
       this.isTyping = false;
     }
-
   }
 
   showPass() {

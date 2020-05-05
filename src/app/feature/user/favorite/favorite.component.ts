@@ -12,6 +12,7 @@ import { ENDPOINT, ApiService } from 'src/app/core/service/api/api.service';
 export class FavoriteComponent implements OnInit {
   data: any;
   user: any;
+  checkFa: boolean;
   constructor(
     private localer: LocalerService,
     private apiService: ApiService,
@@ -21,21 +22,29 @@ export class FavoriteComponent implements OnInit {
     this.apiService.get(ENDPOINT.users, '/' + this.idUser).subscribe(e => {
       this.user = e;
       this.data = JSON.parse(e.favorite);
-      console.log(this.user);
+      this.isNullFa()
     });
+
   }
+
+  isNullFa() {
+    if (this.data === undefined || this.data.length == 0) {
+      this.checkFa = true;
+    } else {
+      this.checkFa = false;
+    }
+
+  }
+
   deleteFa(item) {
     let dialog = confirm('Bạn có muốn xóa sản phẩm này khỏi mục yêu thích');
-    let index = this.data.findIndex(e => e.id === item.id)
-
-    console.log(index);
+    let index = this.data.findIndex(e => e.id === item.id);
     if (dialog) {
-  
       this.data.splice(index, 1);
-
       this.user.favorite = this.data;
       this.apiService.putFa(ENDPOINT.users + '/' + this.user.id, this.user);
     }
+    this.isNullFa()
   }
 
 }
