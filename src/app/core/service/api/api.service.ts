@@ -53,7 +53,7 @@ export class ApiService {
     const axios = require('axios');
 
     axios.post(API_DOMAIN + url, params).then(resp => {
-      console.log(resp.data);
+  
     }).catch(error => {
       console.log(error);
     });

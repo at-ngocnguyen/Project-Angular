@@ -22,7 +22,6 @@ export class LoginComponent implements OnInit {
     private apiService: ApiService,
     private router: Router,
     private local: LocalerService,
-    private userService: UserService
   ) { }
 
   doLogin(form) {
