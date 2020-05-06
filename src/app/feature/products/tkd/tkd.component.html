@@ -1,17 +1,32 @@
-<div class="container">
-  <section class="category">
-    <h2>Thuốc kê đơn</h2>
-    <app-line></app-line>
-    <div class="row">
-      <div *ngFor="let item of data" appFavorite [node]="item" class="col-sm-3">
-        <div class="product">
-          <div (click)="getDetail(item)">
-            <img src={{item.img}}>
-            <p>{{item.name}}</p>
-            <p>{{item.price}}$</p>
+<section class="category">
+  <h2>Thuốc kê đơn</h2>
+  <app-line></app-line>
+  <div class="row">
+    <div class="portfolio-page col-sm-3" *ngFor="let item of data" appFavorite [node]="item">
+      <div class="image-wrapper">
+        <div class="portfolio-image dexp-image relative">
+          <div class="carousel-item">
+            <img src={{item.img}} width="800" height="600" alt="">
+          </div>
+        </div>
+        <div *ngIf="isLogin">
+          <div class="overlay">
+            <div class="overlay-inner">
+              <div>
+                <i class=" portfolio-icon fas fa-heart" [style.color]="item.state ? 'red' :'white'"></i>
+              </div>
+            </div>
           </div>
         </div>
       </div>
+      <div class="portfolio-content">
+        <h5 class="portfolio-title">
+          <a routerLink="/detail/{{item.id}}" hreflang="en">{{item.name}}</a>
+        </h5>
+        <div class="portfolio-description">
+          <p>{{item.price}}</p>
+        </div>
+      </div>
     </div>
-  </section>
-</div>
+  </div>
+</section>
