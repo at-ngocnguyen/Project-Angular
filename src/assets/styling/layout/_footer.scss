@@ -1,5 +1,10 @@
 .footer {
 
+  span,
+  a {
+    color: $grey;
+  }
+
   color: $grey;
 
   .links {
@@ -45,6 +50,7 @@
   }
 
   .copyright p {
+    color: white;
     border-top: 1px solid map-get($map: $color, $key: border);
   }
 }

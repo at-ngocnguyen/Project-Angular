@@ -1,28 +1,30 @@
 <div class="container">
-  <div class="category">
-    <div class="row">
-      <div class="portfolio-page col-sm-3" *ngFor="let item of data">
-        <div class="image-wrapper product">
-          <div class="portfolio-image dexp-image relative">
-            <div class="carousel-item">
+  <div class="row">
+    <div class="portfolio-page col-lg-6 col-md-9 col-sm-9  col-xs-12" *ngFor="let item of data">
+      <div class="image-wrapper">
+        <div class="portfolio-image dexp-image relative">
+          <div class="carousel-item">
+            <a routerLink="/detail/{{item.id}}">
               <img src={{item.img}} width="800" height="600" alt="">
-            </div>
-          </div>
-          <div class="favorite">
-            <i class="fas fa-times-circle" style="color:red" (click)="deleteFa(item)"></i>
+            </a>
           </div>
         </div>
-        <div class="portfolio-content">
-          <h5 class="portfolio-title">
-            <a routerLink="/detail/{{item.id}}" hreflang="en">{{item.name}}</a>
-          </h5>
-          <div class="portfolio-description">
-            <p>{{item.price}}</p>
-          </div>
+
+      </div>
+      <div class="btn-del">
+        <i class="fas fa-times-circle" style="color:red" (click)="deleteFa(item)"></i>
+      </div>
+      <div class="portfolio-content">
+        <h5 class="portfolio-title">
+          <a routerLink="/detail/{{item.id}}" hreflang="en">{{item.name}}</a>
+        </h5>
+        <div class="portfolio-description">
+          <p>{{item.price}}</p>
         </div>
       </div>
     </div>
   </div>
+
   <p class="fa-error" *ngIf="checkFa">Bạn chưa có sản phẩm nào được thêm vào mục này vui lòng <a class="btn-link"
-    routerLink="/home">nhấn vào đây</a> để chọn sản phẩm</p>
+      routerLink="/home">nhấn vào đây</a> để chọn sản phẩm</p>
 </div>
