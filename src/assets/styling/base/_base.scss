@@ -6,6 +6,10 @@
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
+body {
+  min-width: 100%;
+}
+
 ul li {
   list-style-type: none;
 }
@@ -22,10 +26,6 @@ h2 {
   padding-top: 20px;
 }
 
-.text-center {
-  text-align: center;
-}
-
 img {
   width: 100%;
 }
@@ -39,21 +39,13 @@ img {
 }
 
 /* Extra small devices (phones, 600px and down) */
-@media only screen and (max-width: 600px) {
- 
-}
+@media only screen and (max-width: 600px) {}
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
-@media only screen and (min-width: 600px) {
- 
-}
+@media only screen and (min-width: 600px) {}
 
 /* Medium devices (landscape tablets, 768px and down) */
 @media only screen and (max-width: 768px) {
-  h2 {
-    font-size: 1rem;
-  }
-
   .line-content {
     width: 100px;
   }
