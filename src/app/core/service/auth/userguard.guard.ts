@@ -1,7 +1,6 @@
 import { Injectable } from '@angular/core';
 import { CanActivate, ActivatedRouteSnapshot, RouterStateSnapshot, UrlTree, CanActivateChild, Router } from '@angular/router';
 import { Observable } from 'rxjs';
-import { LocalerService } from '../localer/localer.service';
 import { AuthService } from './auth.service';
 
 @Injectable({
@@ -29,8 +28,8 @@ export class UserGuard implements CanActivate, CanActivateChild {
 
   checkLogin() {
     if (!this.authen.isLogin) {
-      this.router.navigateByUrl('/')
+      this.router.navigateByUrl('/');
     }
-    return this.authen.isLogin
+    return this.authen.isLogin;
   }
 }

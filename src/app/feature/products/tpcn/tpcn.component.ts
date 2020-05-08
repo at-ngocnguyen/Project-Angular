@@ -17,19 +17,19 @@ export class TpcnComponent implements OnInit {
     private apiService: ApiService,
     private localer: LocalerService,
     private auth: AuthService,
-    private route:Router,
+    private route: Router,
     private userService: UserService
   ) { }
   getDetail(product) {
     this.localer.saveLocalStorage({ currentProduct: product }, 'DETAIL');
-    this.userService.changeProduct(product)
-    this.route.navigateByUrl('/detail/' + product.id)
+    this.userService.changeProduct(product);
+    this.route.navigateByUrl('/detail/' + product.id);
   }
   ngOnInit(): void {
     this.auth.currentStatus.subscribe(e => this.isLogin = e);
     this.apiService.get(ENDPOINT.category, '/3/products').subscribe(e => {
       this.data = e;
-    })
+    });
   }
 
 }

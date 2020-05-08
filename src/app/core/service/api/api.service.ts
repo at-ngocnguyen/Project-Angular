@@ -3,7 +3,7 @@ import { Observable, throwError } from 'rxjs';
 import { catchError } from 'rxjs/operators';
 import { Injectable } from '@angular/core';
 import { environment } from 'src/environments/environment';
-declare var require: any
+declare var require: any;
 
 
 export const ENDPOINT = {
@@ -27,7 +27,7 @@ export class ApiService {
     * @param url : path from ENDPOINT
     * @param params : ex: {key: value}
     */
-  get(url: string, params?: any): Observable<any> {    
+  get(url: string, params?: any): Observable<any> {
     return this.http.get(API_DOMAIN + url + params).pipe(
       catchError(this.handleError)
     );
@@ -53,7 +53,7 @@ export class ApiService {
     const axios = require('axios');
 
     axios.post(API_DOMAIN + url, params).then(resp => {
-  
+
     }).catch(error => {
       console.log(error);
     });
@@ -69,7 +69,7 @@ export class ApiService {
   //     catchError(this.handleError)
   //   );
   // }
-  //put json-server
+  // put json-server
   putFa(url: string, params: any) {
     const axios = require('axios');
     params.favorite = JSON.stringify(params.favorite);

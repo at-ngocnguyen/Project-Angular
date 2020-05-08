@@ -7,7 +7,7 @@ import { BlogsComponent } from './blogs/blogs.component';
 
 
 @NgModule({
-  declarations: [IntroduceComponent,BlogsComponent],
+  declarations: [IntroduceComponent, BlogsComponent],
   imports: [
     CommonModule,
     HomeRoutingModule
@@ -15,6 +15,6 @@ import { BlogsComponent } from './blogs/blogs.component';
   providers: [
     ApiService
   ],
-  exports:[IntroduceComponent,BlogsComponent]
+  exports: [IntroduceComponent, BlogsComponent]
 })
 export class HomeModule { }

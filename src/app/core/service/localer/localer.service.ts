@@ -23,6 +23,6 @@ export class LocalerService {
   }
 
   delLocalStorage(name: string) {
-    localStorage.removeItem(name)
+    localStorage.removeItem(name);
   }
 }
