@@ -23,9 +23,9 @@ export class HomeComponent implements OnInit {
 		private userService: UserService
 	) { }
 
-	idUser = this.localer.getLocalStorage('TOKEN') ? this.localer.getLocalStorage('TOKEN').currentUser.id : false
+	idUser = this.localer.getLocalStorage('TOKEN') ? this.localer.getLocalStorage('TOKEN').currentUser.id : false;
 
-	curentFa: any
+	curentFa: any;
 
 	checkFa(array, category) {
 
@@ -35,12 +35,12 @@ export class HomeComponent implements OnInit {
 				for (let j = 0; j < this.curentFa.length; j++) {
 					if (array[i].id === this.curentFa[j].id) {
 						array[i].state = true;
-						if (category == 1) {
-							this.tkd = array
-						} else if (category == 2) {
-							this.tkkd = array
+						if (category === 1) {
+							this.tkd = array;
+						} else if (category === 2) {
+							this.tkkd = array;
 						} else {
-							this.tpcn = array
+							this.tpcn = array;
 						}
 					}
 				}
@@ -50,8 +50,8 @@ export class HomeComponent implements OnInit {
 
 	getDetail(product) {
 		this.localer.saveLocalStorage({ currentProduct: product }, 'DETAIL');
-		this.userService.changeProduct(product)
-		this.route.navigateByUrl('/detail/' + product.id)
+		this.userService.changeProduct(product);
+		this.route.navigateByUrl('/detail/' + product.id);
 	}
 
 	ngOnInit(): void {
@@ -59,19 +59,19 @@ export class HomeComponent implements OnInit {
 		this.apiService.get(ENDPOINT.category, '/1/products?page=1&limit=4').subscribe(e => {
 			this.tkd = e;
 			if (this.idUser) {
-				this.checkFa(e, 1)
+				this.checkFa(e, 1);
 			}
 		});
 		this.apiService.get(ENDPOINT.category, '/2/products?page=1&limit=4').subscribe(e => {
-			this.tkkd = e
+			this.tkkd = e;
 			if (this.idUser) {
-				this.checkFa(e, 2)
+				this.checkFa(e, 2);
 			}
 		});
 		this.apiService.get(ENDPOINT.category, '/3/products?page=1&limit=4').subscribe(e => {
-			this.tpcn = e
+			this.tpcn = e;
 			if (this.idUser) {
-				this.checkFa(e, 3)
+				this.checkFa(e, 3);
 			}
 		});
 

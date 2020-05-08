@@ -6,12 +6,11 @@ import { Component, OnInit, Input } from '@angular/core';
   styleUrls: ['./product.component.scss']
 })
 export class ProductComponent implements OnInit {
-  @Input() product: any;// get product data
-  @Input() isLogin: boolean;// get islogin data
+  @Input() product: any; // get product data
+  @Input() isLogin: boolean; // get islogin data
   constructor() { }
 
   ngOnInit(): void {
-    console.log(this.product);
   }
 
 }

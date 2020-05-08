@@ -8,8 +8,8 @@ import { Router } from '@angular/router';
   selector: '[appFavorite]'
 })
 export class FavoriteDirective {
-  @Input() node: any;//get value of data object when click 
-  idUser = this.localer.getLocalStorage('TOKEN') ? this.localer.getLocalStorage('TOKEN').currentUser.id : false
+  @Input() node: any; // get value of data object when click ;
+  idUser = this.localer.getLocalStorage('TOKEN') ? this.localer.getLocalStorage('TOKEN').currentUser.id : false;
   dataUser: any;
   constructor(
     private localer: LocalerService,
@@ -21,33 +21,33 @@ export class FavoriteDirective {
   @HostListener('click', ['$event.target'])
   onClick(element: any) {
 
-    if (element.nodeName === 'I') {//get Element I has clicked
+    if (element.nodeName === 'I') {// get Element I has clicked
       if (this.idUser) {
         this.api.get(ENDPOINT.users, '/' + this.idUser).subscribe(e => {
 
           this.dataUser = e;
           this.dataUser.favorite = JSON.parse(this.dataUser.favorite);
-          let index = this.user.findIndex(this.dataUser.favorite, this.node);
+          const index = this.user.findIndex(this.dataUser.favorite, this.node);
           // let index = this.dataUser.favorite.findIndex(element => element.id === this.node.id);
           this.node.state = !this.node.state;
 
           if (this.node.state === true) {
-            //style color when click
-            if (index == -1) {
-              this.dataUser.favorite.push(this.node)
-              this.api.putFa(ENDPOINT.users + '/' + this.dataUser.id, this.dataUser)
+            // style color when click
+            if (index === -1) {
+              this.dataUser.favorite.push(this.node);
+              this.api.putFa(ENDPOINT.users + '/' + this.dataUser.id, this.dataUser);
             }
           }
           else {
-            this.dataUser.favorite.splice(index, 1)
-            this.api.putFa(ENDPOINT.users + '/' + this.dataUser.id, this.dataUser)
+            this.dataUser.favorite.splice(index, 1);
+            this.api.putFa(ENDPOINT.users + '/' + this.dataUser.id, this.dataUser);
           }
         });
       }
       else {
-        let retVal = confirm('Vui lòng đăng nhập để thực hiện chức năng này!');
+        const retVal = confirm('Vui lòng đăng nhập để thực hiện chức năng này!');
         if (retVal) {
-          this.route.navigateByUrl('/login')
+          this.route.navigateByUrl('/login');
         }
       }
     }

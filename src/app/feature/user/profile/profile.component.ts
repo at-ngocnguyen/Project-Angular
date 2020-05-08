@@ -10,38 +10,37 @@ import { AuthService } from 'src/app/core/service/auth/auth.service';
 })
 export class ProfileComponent implements OnInit {
   isTyping = false;
-  show: boolean = false;
-  statePass: string = 'password';
+  show = false;
+  statePass = 'password';
   icon: string;
   data: any;
   constructor(
     private apiService: ApiService,
     private localer: LocalerService,
     private auth: AuthService,
-    
   ) { }
 
-  idUser = this.localer.getLocalStorage('TOKEN') ? this.localer.getLocalStorage('TOKEN').currentUser.id : false
+  idUser = this.localer.getLocalStorage('TOKEN') ? this.localer.getLocalStorage('TOKEN').currentUser.id : false;
 
   ngOnInit(): void {
     this.apiService.get(ENDPOINT.users, '/' + this.idUser).subscribe(e => {
-      this.data = e
+      this.data = e;
     });
   }
 
   editProfile(form) {
-    let newData = {
+    const newData = {
       ...this.data
-    }
+    };
     if (form.value.pass) {
-      newData.pass = form.value.pass
-      newData.rePass = form.value.pass
+      newData.pass = form.value.pass;
+      newData.rePass = form.value.pass;
     }
     if (form.value.fullName) {
       newData.fullName = form.value.fullName;
 
     }
-    let dialog = confirm('Bạn có muốn thay đổi thông tin cá nhân không?')
+    const dialog = confirm('Bạn có muốn thay đổi thông tin cá nhân không?');
     if (dialog) {
       this.data = newData;
       this.localer.saveLocalStorage({ currentUser: newData }, 'TOKEN');
@@ -52,7 +51,7 @@ export class ProfileComponent implements OnInit {
   }
 
   showPass() {
-    this.show = !this.show
+    this.show = !this.show;
     if (this.show) {
       this.statePass = 'text';
     } else {

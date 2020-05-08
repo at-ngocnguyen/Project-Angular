@@ -60,6 +60,7 @@ import { ProductComponent } from './share/module/product/product.component';
     UserGuard,
     ProfileCanDeactivate
   ],
+
   bootstrap: [AppComponent]
 })
 export class AppModule { }

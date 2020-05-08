@@ -10,7 +10,7 @@ import { UserService } from 'src/app/core/user/user.service';
 })
 export class IntroduceComponent implements OnInit {
   unShow = true;
-  link: any
+  link: any;
   ctg: string;
   data = {
     id: 14,
@@ -20,7 +20,7 @@ export class IntroduceComponent implements OnInit {
     inventory: 10,
     description: 'Viên uống Natrol Biotin 10.000 mcg bổ sung thành phần Biotin (còn gọi là vitamin H) - vốn được biết đến là là vitamin quan trọng cho tóc và móng. Natrol Biotin 10000 mcg không chứa phụ gia gây hại, không ảnh hưởng tới hệ tiêu hóa, thích hợp sử dụng cho cả nam và nữ.',
     categoryId: 2
-  }
+  };
 
   constructor(
     private localer: LocalerService,
@@ -30,22 +30,22 @@ export class IntroduceComponent implements OnInit {
 
   getDetail(product) {
     this.localer.saveLocalStorage({ currentProduct: product }, 'DETAIL');
-    this.userService.changeProduct(product)
-    this.route.navigateByUrl('/detail/' + product.id)
+    this.userService.changeProduct(product);
+    this.route.navigateByUrl('/detail/' + product.id);
   }
   ngOnInit(): void {
-    if (this.data.categoryId == 1) {
-      this.ctg = 'Thuốc kê đơn'
-    } else if (this.data.categoryId == 2) {
-      this.ctg = 'Thuốc không kê đơn'
+    if (this.data.categoryId === 1) {
+      this.ctg = 'Thuốc kê đơn';
+    } else if (this.data.categoryId === 2) {
+      this.ctg = 'Thuốc không kê đơn';
     } else {
-      this.ctg = 'Thực phẩm chức năng'
+      this.ctg = 'Thực phẩm chức năng';
     }
   }
   showMore() {
-    this.unShow = false
+    this.unShow = false;
   }
   onDestroy() {
-    this.unShow = true
+    this.unShow = true;
   }
 }

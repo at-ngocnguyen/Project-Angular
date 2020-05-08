@@ -12,9 +12,9 @@ export class RegisterComponent implements OnInit {
   email: string;
   fullName: string;
 
-  className: string = 'form-control';
-  classMail: string = 'form-control';
-  classPass: string = 'form-control';
+  className = 'form-control';
+  classMail = 'form-control';
+  classPass = 'form-control';
   constructor(
     private api: ApiService,
     private route: Router,
@@ -27,7 +27,7 @@ export class RegisterComponent implements OnInit {
   ngOnInit() {
     this.api.get(ENDPOINT.users, '').subscribe(e => {
       this.dataUser = e;
-    })
+    });
   }
 
 
@@ -35,12 +35,12 @@ export class RegisterComponent implements OnInit {
     let validMail = false;
     let validPass = false;
     let validName = false;
-    let currentUser = {
+    const currentUser = {
       id: this.dataUser.length + 1, ...form.value, favorite: '[]'
     };
     if (form.value.fullName) {
       validName = true;
-      this.className = 'form-control is-valid'
+      this.className = 'form-control is-valid';
     } else {
       validName = false;
       this.className = 'form-control is-invalid';
@@ -48,7 +48,7 @@ export class RegisterComponent implements OnInit {
 
     if (this.userService.validateEmail(form.value.email) && !this.userService.checkMail(form.value.email, this.dataUser)) {
       validMail = true;
-      this.classMail = 'form-control is-valid'
+      this.classMail = 'form-control is-valid';
     } else {
       this.classMail = 'form-control is-invalid';
       validMail = false;
@@ -57,7 +57,7 @@ export class RegisterComponent implements OnInit {
     if (form.value.pass) {
       if (this.userService.checkPass(form.value.pass, form.value.rePass) && form.value.pass.length >= 8) {
         validPass = true;
-        this.classPass = 'form-control is-valid'
+        this.classPass = 'form-control is-valid';
       }
       else {
         validPass = false;
@@ -65,13 +65,13 @@ export class RegisterComponent implements OnInit {
       }
     } else {
       validPass = false;
-      this.classPass = 'form-control is-invalid'
+      this.classPass = 'form-control is-invalid';
     }
 
     if (validName && validPass && validMail) {
       this.api.post(ENDPOINT.users, currentUser);
       setTimeout(() => {
-        this.route.navigateByUrl('/login')
+        this.route.navigateByUrl('/login');
       }, 2000);
 
     }

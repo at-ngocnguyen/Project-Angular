@@ -23,8 +23,8 @@ export class TkkdComponent implements OnInit {
   ) { }
   getDetail(product) {
     this.localer.saveLocalStorage({ currentProduct: product }, 'DETAIL');
-    this.userService.changeProduct(product)
-    this.route.navigateByUrl('/detail/' + product.id)
+    this.userService.changeProduct(product);
+    this.route.navigateByUrl('/detail/' + product.id);
   }
   ngOnInit(): void {
     this.auth.currentStatus.subscribe(e => this.isLogin = e);

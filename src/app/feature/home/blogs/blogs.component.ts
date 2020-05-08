@@ -19,7 +19,7 @@ export class BlogsComponent implements OnInit {
     avatar: 'assets/anything/customer.jpg',
     comment: 'I think your products very good, healthy and balance',
     date: '25/04/2020'
-  }
+  };
   constructor() { }
 
   ngOnInit(): void {
