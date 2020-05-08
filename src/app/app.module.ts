@@ -25,6 +25,7 @@ import { ProfileCanDeactivate } from './feature/user/profile/profile.candeactive
 import { CarouselModule } from 'ngx-bootstrap/carousel';
 import { HomeModule } from './feature/home/home.module';
 import { LineComponent } from './share/line/line.component';
+import { ProductComponent } from './share/module/product/product.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -43,6 +44,7 @@ import { LineComponent } from './share/line/line.component';
     TpcnComponent,
     FavoriteDirective,
     LineComponent,
+    ProductComponent,
   ],
   imports: [
     BrowserModule,
