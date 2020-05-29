@@ -1,0 +1,56 @@
+.footer {
+
+  span,
+  a {
+    color: $grey;
+  }
+
+  color: $grey;
+
+  .links {
+    ul {
+      list-style-type: none;
+    }
+
+    li a {
+      color: $grey;
+      transition: color .2s;
+
+      &:hover {
+        text-decoration: none;
+        color: map-get($map: $color, $key: primary);
+      }
+    }
+  }
+
+  h3,
+  h4 {
+    color: $white
+  }
+
+  .about-company {
+    i {
+      font-size: 25px;
+    }
+
+    a {
+      color: $white;
+      transition: color .2s;
+
+      &:hover {
+        color: map-get($map: $color, $key: primary);
+      }
+    }
+  }
+
+  .location {
+    i {
+      font-size: 18px;
+    }
+  }
+
+  .copyright p {
+    color: white;
+    border-top: 1px solid map-get($map: $color, $key: border);
+  }
+}

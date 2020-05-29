@@ -1,0 +1,26 @@
+<div class="image-wrapper">
+  <div class="portfolio-image dexp-image relative">
+    <div class="carousel-item">
+      <a routerLink="/detail/{{product.id}}">
+        <img src={{product.img}} width="800" height="600" alt="">
+      </a>
+    </div>
+  </div>
+  <div *ngIf="isLogin">
+    <div class="overlay">
+      <div class="overlay-inner">
+        <div>
+          <i class=" portfolio-icon fas fa-heart" [style.color]="product.state ? 'red' :'white'"></i>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="portfolio-content">
+  <h5 class="portfolio-title">
+    <a routerLink="/detail/{{product.id}}" hreflang="en">{{product.name}}</a>
+  </h5>
+  <div class="portfolio-description">
+    <p>{{product.price}}</p>
+  </div>
+</div>

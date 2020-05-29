@@ -1,0 +1,20 @@
+.detail {
+
+  margin: auto;
+
+  .img-detail {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: solid 1px $grey;
+    border-radius: 5px;
+  }
+
+  .arrow {
+    width: 70px;
+  }
+
+  .price {
+    color: $yellow;
+  }
+}
