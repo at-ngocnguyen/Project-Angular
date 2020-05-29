@@ -1,0 +1,24 @@
+.new-product {
+  h2 {
+    text-align: center;
+    margin: 10px 0;
+  }
+
+  width: 60%;
+  margin: 50px auto;
+
+  img {
+    width: 100%;
+  }
+}
+
+
+
+.news {
+  width: 90%;
+  color: $black;
+
+  .news-author {
+    font-size: $sm;
+  }
+}

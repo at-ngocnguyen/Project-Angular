@@ -1,0 +1,36 @@
+<div class="container">
+  <div appFavorite [node]="data" class="detail">
+    <div class=" row">
+      <div class="col-sm-6 img-detail ">
+        <img src={{data?.img}}>
+      </div>
+      <div class="col-sm-6">
+        <div class="pl-3">
+          <h4>{{data?.name}}</h4>
+          <img src="assets/anything/arrow.png" class="arrow">
+          <h3 class="price ">{{data?.price}} $</h3>
+          <h4>Giới thiệu</h4>
+          <p>{{data?.description}}</p>
+        </div>
+        <hr>
+        <p class="pl-3">Danh mục: {{ctg}}</p>
+        <hr>
+        <button class="btn btn-link">
+          <i>{{data?.state? "Un Favorite": "Favorite"}}</i>
+        </button>
+        <i class="far fa-heart" [style.color]="data?.state ? 'red' :'grey'"></i>
+      </div>
+    </div>
+
+  </div>
+  <section class="category">
+    <h2>Thuốc cùng danh mục</h2>
+    <app-line></app-line>
+    <div class="row">
+      <div class="portfolio-page  col-lg-3 col-md-6 col-sm-6  col-xs-12" *ngFor="let item of category" appFavorite
+        [node]="item">
+        <app-product [product]="item"></app-product>
+      </div>
+    </div>
+  </section>
+</div>

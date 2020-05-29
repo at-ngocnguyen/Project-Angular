@@ -1,0 +1,9 @@
+<section class="category">
+  <h2>Thuốc kê đơn</h2>
+  <app-line></app-line>
+  <div class="row">
+    <div class="portfolio-page col-sm-3" *ngFor="let item of data" appFavorite [node]="item">
+      <app-product [product]="item" [isLogin]="isLogin"></app-product>
+    </div>
+  </div>
+</section>

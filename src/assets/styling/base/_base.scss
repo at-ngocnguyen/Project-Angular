@@ -1,0 +1,62 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+body {
+  min-width: 100%;
+}
+
+ul li {
+  list-style-type: none;
+}
+
+a {
+  color: $black;
+}
+
+h2 {
+  font-size: 2rem;
+  text-align: center;
+  font-weight: 600;
+  text-transform: uppercase;
+  padding-top: 20px;
+}
+
+img {
+  width: 100%;
+}
+
+.clr {
+  &::after {
+    display: block;
+    content: '';
+    clear: both;
+  }
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {}
+
+/* Medium devices (landscape tablets, 768px and down) */
+@media only screen and (max-width: 768px) {
+  .line-content {
+    width: 100px;
+  }
+}
+
+/* Large devices (laptops/desktops, 769px and up) */
+@media only screen and (min-width: 769px) {
+  .line-content {
+    width: 189px;
+  }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {}

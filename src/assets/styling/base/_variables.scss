@@ -1,0 +1,13 @@
+$white: #ffff;
+$blue: #4180CB;
+$link:#007bff;
+$yellow:#e6ae48;
+$grey:#babdbf;
+$red:#e10c00;
+$rgba-black: rgba(255, 255, 255, .1);
+$sm:12px;
+$black:#000000;
+$color: (primary: $blue,
+  secondary: $white,
+  border: $rgba-black,
+  dark: $black, );

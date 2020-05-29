@@ -1,0 +1,36 @@
+<div class="container">
+  <app-introduce></app-introduce>
+  <div>
+    <section class="category">
+      <h2>Thuốc kê đơn</h2>
+      <app-line></app-line>
+      <div class="row">
+        <div class="portfolio-page col-lg-3 col-md-6 col-sm-6 col-xs-12" *ngFor="let item1 of tkd" appFavorite
+          [node]="item1">
+          <app-product [product]="item1" [isLogin]="isLogin"></app-product>
+        </div>
+      </div>
+    </section>
+    <section class="category">
+      <h2>Thuốc không kê đơn</h2>
+      <app-line></app-line>
+      <div class="row">
+        <div class="portfolio-page col-lg-3 col-md-6 col-sm-6  col-xs-12" *ngFor="let item2 of tkkd" appFavorite
+          [node]="item2">
+          <app-product [product]="item2" [isLogin]="isLogin"></app-product>
+        </div>
+      </div>
+    </section>
+    <section class="category">
+      <h2>Thực phẩm chức năng</h2>
+      <app-line></app-line>
+      <div class="row">
+        <div class="portfolio-page col-lg-3 col-md-6 col-sm-6  col-xs-12" *ngFor="let item3 of tpcn" appFavorite
+          [node]="item3">
+          <app-product [product]="item3" [isLogin]="isLogin"></app-product>
+        </div>
+      </div>
+    </section>
+  </div>
+</div>
+<app-blogs></app-blogs>

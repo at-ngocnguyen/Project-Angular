@@ -1,0 +1,34 @@
+<img src="assets/banner/banner4.png">
+<div class="container">
+  <div class="row">
+    <article class=" col-lg-9 col-md-9 col-sm-12  col-xs-12">
+      <h2>Tình hình Covid19</h2>
+      <img src="assets/anything/line-title.png" class="line-content">
+      <div class="row">
+        <div class="news col-sm-6 col-xs-12 m-auto">
+          <a href={{news.link}} target="_blank"><img src={{news.img}} class="detail--img__100 " alt="" /></a>
+          <h4> <a href={{news.link}} target="_blank">{{news.tittle}}</a></h4>
+          <p class="news-author pt-2 pb-3"><b>{{news.author}}</b> đăng lúc {{news.date}} </p>
+          <p class="news-content">{{news.content}}</p>
+          <a href={{news.link}} target="_blank" class="btn btn-link">Xem thêm</a>
+        </div>
+        <div class="news col-sm-6 col-xs-12 m-auto">
+          <a href={{news.link}} target="_blank"><img src={{news.img}} class="detail--img__100 " alt="" /></a>
+          <h4> <a href={{news.link}} target="_blank">{{news.tittle}}</a></h4>
+          <p class="news-author pt-2 pb-3"><b>{{news.author}}</b> đăng lúc {{news.date}} </p>
+          <p class="news-content">{{news.content}}</p>
+          <a href={{news.link}} target="_blank" class="btn btn-link">Xem thêm</a>
+        </div>
+      </div>
+    </article>
+    <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
+      <section>
+        <h2>Khách hàng</h2>
+        <img src="assets/anything/line-title.png" class="line-content">
+        <img src={{customer.avatar}}>
+        <h4 class="text-center">{{customer.name}}</h4>
+        <p>"{{customer.comment}}"</p>
+      </section>
+    </div>
+  </div>
+</div>
